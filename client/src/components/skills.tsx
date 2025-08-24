@@ -60,7 +60,7 @@ export default function Skills() {
             >
               All Skills
             </button>
-            {skillsData.categories.map((category) => (
+            {skillsData.categories.map((category: any) => (
               <button
                 key={category.name}
                 onClick={() => setSelectedCategory(category.name)}
@@ -80,11 +80,11 @@ export default function Skills() {
         {/* Skills Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 animate-slide-up">
           {skillsData.categories
-            .filter(category => !selectedCategory || category.name === selectedCategory)
-            .flatMap(category => 
-              category.skills.map(skill => ({ ...skill, category: category.name }))
+            .filter((category: any) => !selectedCategory || category.name === selectedCategory)
+            .flatMap((category: any) => 
+              category.skills.map((skill: any) => ({ ...skill, category: category.name }))
             )
-            .map((skill, index) => (
+            .map((skill: any, index: number) => (
               <Card 
                 key={`${skill.category}-${skill.name}-${index}`} 
                 className="group border-border shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
@@ -136,7 +136,7 @@ export default function Skills() {
               <div className="grid md:grid-cols-3 gap-6">
                 <div>
                   <div className="text-3xl font-bold text-brand-500 mb-2">
-                    {skillsData.categories.reduce((total, cat) => total + cat.skills.length, 0)}+
+                    {skillsData.categories.reduce((total: number, cat: any) => total + cat.skills.length, 0)}+
                   </div>
                   <p className="text-muted-foreground">Technical Skills</p>
                 </div>

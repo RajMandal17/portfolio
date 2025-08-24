@@ -5,6 +5,12 @@ import { fetchGitHubContributions } from "@/lib/github-api";
 import { Calendar, GitCommit, Zap } from "lucide-react";
 import { useEffect, useRef } from "react";
 
+declare global {
+  interface Window {
+    CalHeatmap: any;
+  }
+}
+
 export default function Contributions() {
   const heatmapRef = useRef<HTMLDivElement>(null);
   
