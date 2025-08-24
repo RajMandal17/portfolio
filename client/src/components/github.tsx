@@ -17,7 +17,7 @@ import {
 export default function GitHub() {
   const { data: repos, isLoading: reposLoading, error: reposError } = useQuery({
     queryKey: ['github', 'repos'],
-    queryFn: () => fetchGitHubRepos('rajkumarmandal17'),
+    queryFn: () => fetchGitHubRepos('RajMandal17'),
     staleTime: 1000 * 60 * 2, // 2 minutes - more frequent updates
     refetchOnWindowFocus: true, // Refetch when window regains focus
     refetchOnMount: true, // Always refetch on component mount
@@ -26,7 +26,7 @@ export default function GitHub() {
 
   const { data: user, isLoading: userLoading } = useQuery({
     queryKey: ['github', 'user'],
-    queryFn: () => fetchGitHubUser('rajkumarmandal17'),
+    queryFn: () => fetchGitHubUser('RajMandal17'),
     staleTime: 1000 * 60 * 2, // 2 minutes - more frequent updates
     refetchOnWindowFocus: true, // Refetch when window regains focus
     refetchOnMount: true, // Always refetch on component mount

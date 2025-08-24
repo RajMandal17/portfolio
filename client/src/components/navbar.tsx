@@ -19,7 +19,7 @@ export default function Navbar() {
   
   const { data: repos, isLoading } = useQuery({
     queryKey: ['github', 'repos'],
-    queryFn: () => fetchGitHubRepos('rajkumarmandal17'),
+    queryFn: () => fetchGitHubRepos('RajMandal17'),
     staleTime: 1000 * 60 * 2, // 2 minutes - more frequent updates
     refetchOnWindowFocus: true, // Refetch when window regains focus
     refetchOnMount: true, // Always refetch on component mount
