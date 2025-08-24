@@ -1,0 +1,137 @@
+🧑‍💻 Detailed AI Agent Prompt
+
+You are an expert Full-Stack Developer. Build a personal portfolio website for Rajkumar Mandal. The website should be professional, responsive, and deployable on GitHub Pages.
+
+🔹 Tech Stack & Deployment
+
+Use React + TailwindCSS (or Next.js if SSR is needed, but must export as static for GitHub Pages).
+
+Add gh-pages integration for deployment (npm run deploy).
+
+Code should be production-ready, clean, and modular.
+
+🔹 Website Sections
+
+Navbar
+
+Sticky at the top.
+
+Contains links: Home | Resume | Skills | GitHub | Contributions | Contact.
+
+GitHub Repositories Dropdown:
+
+Fetch repos dynamically from GitHub REST API:
+https://api.github.com/users/rajkumarmandal17/repos
+
+Show repo names in dropdown.
+
+Clicking a repo opens it in a new tab.
+
+Hero / Home Section
+
+Display Name: Rajkumar Mandal.
+
+Animated typing effect:
+"Java Backend Developer | Microservices | Spring Boot | Kafka"
+
+Add a professional photo/avatar (placeholder initially).
+
+Background with subtle animation (gradient or particles).
+
+Resume Section
+
+Convert LaTeX resume into structured UI:
+
+Professional Summary → Text block.
+
+Work Experience → Vertical timeline (latest job first).
+
+Technical Skills → Grid/badge layout.
+
+Education → Timeline/cards.
+
+Add Download Resume (PDF) button.
+
+Skills Section
+
+Fetch skills dynamically from LinkedIn page:
+👉 https://www.linkedin.com/in/rajkumarmandal17/details/skills/
+
+If LinkedIn API scraping is not possible, fallback to skills listed in LaTeX resume.
+
+Show as interactive badges with hover effect.
+
+GitHub Section
+
+Dropdown for repositories (from GitHub REST API).
+
+Show top repositories as cards with stars, forks, description.
+
+GitHub Contributions Section
+
+Fetch contributions from GitHub GraphQL API:
+https://api.github.com/graphql
+
+Display contributions in the last year as:
+
+Heatmap (like GitHub profile contribution calendar) OR
+
+Table format (months vs days).
+
+Contact Section
+
+Display:
+
+📧 Email → Rajmandal14792@gmail.com
+
+🔗 LinkedIn → linkedin.com/in/rajkumarmandal17
+
+💻 GitHub → github.com/rajkumarmandal17
+
+📱 Phone → +91 8793148668
+
+Include a contact form (Name, Email, Message → send via EmailJS or Formspree).
+
+🔹 Design & UX Guidelines
+
+Use TailwindCSS + shadcn/ui for styling.
+
+Minimal, professional theme with light/dark mode toggle.
+
+Rounded cards, soft shadows, smooth animations.
+
+Responsive (desktop, tablet, mobile).
+
+SEO optimized (Rajkumar Mandal, Java Backend Developer, Spring Boot, Kafka).
+
+🔹 Extra Features
+
+Animated scroll effects (Framer Motion).
+
+Show live GitHub stats (commits, stars, languages).
+
+Footer with copyright & quick links.
+
+🔹 Deployment Instructions
+
+Add "homepage" field in package.json for GitHub Pages.
+
+Configure gh-pages package.
+
+Provide steps for:
+
+npm run build
+npm run deploy
+
+
+Ensure site works at: https://rajkumarmandal17.github.io/portfolio
+
+📌 Deliverables:
+
+Full React + Tailwind project codebase.
+
+Configured for GitHub Pages deployment.
+
+Uses GitHub + LinkedIn API for dynamic data.
+
+Clean UI that highlights resume, skills, GitHub work, and contributions.
