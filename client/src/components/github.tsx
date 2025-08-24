@@ -230,7 +230,7 @@ export default function GitHub() {
             data-testid="view-all-repos-button"
           >
             <a
-              href="https://github.com/rajkumarmandal17"
+              href="https://github.com/RajMandal17"
               target="_blank"
               rel="noopener noreferrer"
             >

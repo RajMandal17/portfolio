@@ -120,7 +120,7 @@ export default function Contributions() {
         </div>
         
         {/* Contribution Activity Tables */}
-        <div className="space-y-8 animate-slide-up">
+        <div className="grid md:grid-cols-2 gap-8 animate-slide-up">
           {/* Recent Activity Table */}
           <Card className="border-border shadow-lg">
             <CardContent className="p-8">
@@ -130,16 +130,16 @@ export default function Contributions() {
               </div>
               
               {isLoading ? (
-                <div className="space-y-3">
+                <div className="space-y-3 h-96">
                   <Skeleton className="h-10 w-full" />
                   <Skeleton className="h-10 w-full" />
                   <Skeleton className="h-10 w-full" />
                   <Skeleton className="h-10 w-3/4" />
                 </div>
               ) : (
-                <div className="overflow-x-auto">
+                <div className="h-96 overflow-auto border border-border/20 rounded-md">
                   <table className="w-full" data-testid="contributions-table">
-                    <thead>
+                    <thead className="sticky top-0 bg-background/95 backdrop-blur-sm z-10">
                       <tr className="border-b border-border">
                         <th className="text-left py-3 px-4 font-semibold text-muted-foreground">Date</th>
                         <th className="text-left py-3 px-4 font-semibold text-muted-foreground">Day</th>
@@ -205,15 +205,15 @@ export default function Contributions() {
               </div>
               
               {isLoading ? (
-                <div className="space-y-3">
+                <div className="space-y-3 h-96">
                   <Skeleton className="h-10 w-full" />
                   <Skeleton className="h-10 w-full" />
                   <Skeleton className="h-10 w-full" />
                 </div>
               ) : (
-                <div className="overflow-x-auto">
+                <div className="h-96 overflow-auto border border-border/20 rounded-md">
                   <table className="w-full" data-testid="monthly-summary-table">
-                    <thead>
+                    <thead className="sticky top-0 bg-background/95 backdrop-blur-sm z-10">
                       <tr className="border-b border-border">
                         <th className="text-left py-3 px-4 font-semibold text-muted-foreground">Month</th>
                         <th className="text-right py-3 px-4 font-semibold text-muted-foreground">Total Contributions</th>

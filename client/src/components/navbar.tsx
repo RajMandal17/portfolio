@@ -111,7 +111,7 @@ export default function Navbar() {
                     <DropdownMenuSeparator />
                     <DropdownMenuItem asChild>
                       <a
-                        href="https://github.com/rajkumarmandal17"
+                        href="https://github.com/RajMandal17"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center text-brand-600 dark:text-brand-400"
@@ -202,7 +202,7 @@ export default function Navbar() {
                           </a>
                         ))}
                         <a
-                          href="https://github.com/rajkumarmandal17"
+                          href="https://github.com/RajMandal17"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-sm text-brand-600 dark:text-brand-400 font-medium"
