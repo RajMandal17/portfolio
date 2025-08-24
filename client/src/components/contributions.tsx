@@ -2,18 +2,10 @@ import { useQuery } from "@tanstack/react-query";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { fetchGitHubContributions } from "@/lib/github-api";
-import { Calendar, GitCommit, Zap } from "lucide-react";
-import { useEffect, useRef } from "react";
-
-declare global {
-  interface Window {
-    CalHeatmap: any;
-  }
-}
+import { Calendar, GitCommit, Zap, TrendingUp } from "lucide-react";
+import { useMemo } from "react";
 
 export default function Contributions() {
-  const heatmapRef = useRef<HTMLDivElement>(null);
-  
   const { data: contributions, isLoading, error } = useQuery({
     queryKey: ['github', 'contributions'],
     queryFn: () => fetchGitHubContributions('RajMandal17'),
@@ -23,37 +15,42 @@ export default function Contributions() {
     refetchInterval: 1000 * 60 * 15, // Auto-refetch every 15 minutes
   });
 
-  useEffect(() => {
-    if (contributions && heatmapRef.current && window.CalHeatmap) {
-      // Clear any existing heatmap
-      heatmapRef.current.innerHTML = '';
-      
-      // Initialize Cal-Heatmap
-      const cal = new window.CalHeatmap();
-      
-      cal.init({
-        itemSelector: heatmapRef.current,
-        domain: 'month',
-        subDomain: 'day',
-        range: 12,
-        cellSize: 12,
-        cellPadding: 2,
-        cellRadius: 2,
-        tooltip: true,
-        legend: [1, 5, 10, 15],
-        legendColors: {
-          min: '#ebedf0',
-          max: '#216e39',
-          empty: '#ebedf0'
-        },
-        data: contributions.contributionCalendar.weeks.flatMap(week => 
-          week.contributionDays.map(day => ({
-            date: new Date(day.date).getTime() / 1000,
-            value: day.contributionCount
-          }))
-        )
-      });
-    }
+  // Process contributions data for table display
+  const processedData = useMemo(() => {
+    if (!contributions) return { recentContributions: [], monthlyStats: [] };
+    
+    const allDays = contributions.contributionCalendar.weeks.flatMap(week => 
+      week.contributionDays.map(day => ({
+        date: new Date(day.date),
+        count: day.contributionCount,
+        color: day.color
+      }))
+    );
+    
+    // Get recent contributions (last 30 days with activity)
+    const recentContributions = allDays
+      .filter(day => day.count > 0)
+      .sort((a, b) => b.date.getTime() - a.date.getTime())
+      .slice(0, 20);
+    
+    // Calculate monthly stats
+    const monthlyStats = allDays.reduce((acc, day) => {
+      const monthKey = day.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+      const existing = acc.find(item => item.month === monthKey);
+      if (existing) {
+        existing.contributions += day.count;
+        existing.activeDays += day.count > 0 ? 1 : 0;
+      } else {
+        acc.push({
+          month: monthKey,
+          contributions: day.count,
+          activeDays: day.count > 0 ? 1 : 0
+        });
+      }
+      return acc;
+    }, [] as Array<{ month: string; contributions: number; activeDays: number }>);
+    
+    return { recentContributions, monthlyStats: monthlyStats.slice(-6) };
   }, [contributions]);
 
   if (error) {
@@ -122,46 +119,140 @@ export default function Contributions() {
           </Card>
         </div>
         
-        {/* Contributions Heatmap */}
-        <div className="animate-slide-up">
+        {/* Contribution Activity Tables */}
+        <div className="space-y-8 animate-slide-up">
+          {/* Recent Activity Table */}
           <Card className="border-border shadow-lg">
             <CardContent className="p-8">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="text-xl font-bold text-foreground">Contribution Activity</h3>
-                <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                  <span>Less</span>
-                  <div className="flex space-x-1">
-                    <div className="w-3 h-3 bg-slate-200 dark:bg-slate-600 rounded-sm"></div>
-                    <div className="w-3 h-3 bg-green-200 dark:bg-green-800 rounded-sm"></div>
-                    <div className="w-3 h-3 bg-green-400 dark:bg-green-600 rounded-sm"></div>
-                    <div className="w-3 h-3 bg-green-600 dark:bg-green-400 rounded-sm"></div>
-                    <div className="w-3 h-3 bg-green-800 dark:bg-green-200 rounded-sm"></div>
-                  </div>
-                  <span>More</span>
-                </div>
+              <div className="flex items-center mb-6">
+                <TrendingUp className="w-6 h-6 text-brand-500 mr-2" />
+                <h3 className="text-xl font-bold text-foreground">Recent Contribution Activity</h3>
               </div>
               
               {isLoading ? (
                 <div className="space-y-3">
-                  <Skeleton className="h-4 w-full" />
-                  <Skeleton className="h-4 w-full" />
-                  <Skeleton className="h-4 w-full" />
-                  <Skeleton className="h-4 w-3/4" />
+                  <Skeleton className="h-10 w-full" />
+                  <Skeleton className="h-10 w-full" />
+                  <Skeleton className="h-10 w-full" />
+                  <Skeleton className="h-10 w-3/4" />
                 </div>
               ) : (
                 <div className="overflow-x-auto">
-                  <div 
-                    ref={heatmapRef}
-                    id="cal-heatmap" 
-                    className="min-h-[200px]"
-                    data-testid="contributions-heatmap"
-                  ></div>
+                  <table className="w-full" data-testid="contributions-table">
+                    <thead>
+                      <tr className="border-b border-border">
+                        <th className="text-left py-3 px-4 font-semibold text-muted-foreground">Date</th>
+                        <th className="text-left py-3 px-4 font-semibold text-muted-foreground">Day</th>
+                        <th className="text-right py-3 px-4 font-semibold text-muted-foreground">Contributions</th>
+                        <th className="text-center py-3 px-4 font-semibold text-muted-foreground">Activity</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {processedData.recentContributions.length > 0 ? (
+                        processedData.recentContributions.map((day, index) => (
+                          <tr 
+                            key={index} 
+                            className="border-b border-border/50 hover:bg-muted/20 transition-colors"
+                          >
+                            <td className="py-3 px-4 text-foreground">
+                              {day.date.toLocaleDateString('en-US', { 
+                                month: 'short', 
+                                day: 'numeric', 
+                                year: 'numeric' 
+                              })}
+                            </td>
+                            <td className="py-3 px-4 text-muted-foreground">
+                              {day.date.toLocaleDateString('en-US', { weekday: 'short' })}
+                            </td>
+                            <td className="py-3 px-4 text-right">
+                              <span className="font-semibold text-foreground">
+                                {day.count}
+                              </span>
+                            </td>
+                            <td className="py-3 px-4 text-center">
+                              <div 
+                                className="w-4 h-4 rounded-sm mx-auto"
+                                style={{ backgroundColor: day.color }}
+                                title={`${day.count} contributions`}
+                              ></div>
+                            </td>
+                          </tr>
+                        ))
+                      ) : (
+                        <tr>
+                          <td colSpan={4} className="py-8 text-center text-muted-foreground">
+                            No recent contributions found
+                          </td>
+                        </tr>
+                      )}
+                    </tbody>
+                  </table>
                 </div>
               )}
               
               <p className="text-sm text-muted-foreground mt-4">
                 Data fetched from GitHub GraphQL API • Updated daily
               </p>
+            </CardContent>
+          </Card>
+
+          {/* Monthly Summary Table */}
+          <Card className="border-border shadow-lg">
+            <CardContent className="p-8">
+              <div className="flex items-center mb-6">
+                <Calendar className="w-6 h-6 text-blue-500 mr-2" />
+                <h3 className="text-xl font-bold text-foreground">Monthly Summary</h3>
+              </div>
+              
+              {isLoading ? (
+                <div className="space-y-3">
+                  <Skeleton className="h-10 w-full" />
+                  <Skeleton className="h-10 w-full" />
+                  <Skeleton className="h-10 w-full" />
+                </div>
+              ) : (
+                <div className="overflow-x-auto">
+                  <table className="w-full" data-testid="monthly-summary-table">
+                    <thead>
+                      <tr className="border-b border-border">
+                        <th className="text-left py-3 px-4 font-semibold text-muted-foreground">Month</th>
+                        <th className="text-right py-3 px-4 font-semibold text-muted-foreground">Total Contributions</th>
+                        <th className="text-right py-3 px-4 font-semibold text-muted-foreground">Active Days</th>
+                        <th className="text-right py-3 px-4 font-semibold text-muted-foreground">Daily Avg</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {processedData.monthlyStats.length > 0 ? (
+                        processedData.monthlyStats.map((month, index) => (
+                          <tr 
+                            key={index}
+                            className="border-b border-border/50 hover:bg-muted/20 transition-colors"
+                          >
+                            <td className="py-3 px-4 font-medium text-foreground">{month.month}</td>
+                            <td className="py-3 px-4 text-right">
+                              <span className="font-semibold text-foreground">
+                                {month.contributions}
+                              </span>
+                            </td>
+                            <td className="py-3 px-4 text-right text-muted-foreground">
+                              {month.activeDays}
+                            </td>
+                            <td className="py-3 px-4 text-right text-muted-foreground">
+                              {month.activeDays > 0 ? (month.contributions / month.activeDays).toFixed(1) : '0.0'}
+                            </td>
+                          </tr>
+                        ))
+                      ) : (
+                        <tr>
+                          <td colSpan={4} className="py-8 text-center text-muted-foreground">
+                            No contribution data available
+                          </td>
+                        </tr>
+                      )}
+                    </tbody>
+                  </table>
+                </div>
+              )}
             </CardContent>
           </Card>
         </div>
