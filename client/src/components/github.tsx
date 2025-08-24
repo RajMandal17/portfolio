@@ -18,13 +18,19 @@ export default function GitHub() {
   const { data: repos, isLoading: reposLoading, error: reposError } = useQuery({
     queryKey: ['github', 'repos'],
     queryFn: () => fetchGitHubRepos('rajkumarmandal17'),
-    staleTime: 1000 * 60 * 5, // 5 minutes
+    staleTime: 1000 * 60 * 2, // 2 minutes - more frequent updates
+    refetchOnWindowFocus: true, // Refetch when window regains focus
+    refetchOnMount: true, // Always refetch on component mount
+    refetchInterval: 1000 * 60 * 5, // Auto-refetch every 5 minutes
   });
 
   const { data: user, isLoading: userLoading } = useQuery({
     queryKey: ['github', 'user'],
     queryFn: () => fetchGitHubUser('rajkumarmandal17'),
-    staleTime: 1000 * 60 * 5, // 5 minutes
+    staleTime: 1000 * 60 * 2, // 2 minutes - more frequent updates
+    refetchOnWindowFocus: true, // Refetch when window regains focus
+    refetchOnMount: true, // Always refetch on component mount
+    refetchInterval: 1000 * 60 * 10, // Auto-refetch every 10 minutes
   });
 
   const featuredRepos = repos?.slice(0, 6) || [];

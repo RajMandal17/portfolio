@@ -1,0 +1,120 @@
+% Resume in LaTeX
+% Author: Rajkumar Mandal
+
+\documentclass[letterpaper,10pt]{article}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1in}
+
+% Reduce bullet spacing
+\setlist[itemize]{topsep=0pt, partopsep=0pt, itemsep=0pt, parsep=0pt}
+
+% Section formatting
+\titleformat{\section}{\scshape\large\raggedright}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\titlespacing{\section}{0pt}{4pt}{4pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \huge{\textbf{Rajkumar Mandal}} & \href{mailto:Rajmandal14792@gmail.com}{Rajmandal147@gmail.com} \\
+  \href{https://www.linkedin.com/in/rajkumarmandal17}{linkedin.com/in/rajkumarmandal17} & +91 8793148668 \\
+\end{tabular*}
+
+%----------SUMMARY-----------------
+\section{Professional Summary}
+\vspace{6pt}
+Innovative and detail-oriented \textbf{Java Backend Developer} with experience in designing, developing, and deploying high-performance microservices and enterprise applications using \textbf{Java 8+}, \textbf{Spring Boot}, and \textbf{Kafka}. Proficient in building scalable REST APIs with \textbf{Swagger/OpenAPI} standards, optimizing relational and NoSQL databases, and implementing event-driven architectures. Experienced in domains including \textbf{finance, healthcare, and supply chain}, with a strong focus on clean architecture, domain-driven design. Adept at cross-functional collaboration, problem-solving, and delivering reliable, production-grade software.
+
+
+
+%----------WORK EXPERIENCE-----------------
+\section{Work Experience}
+\vspace{6pt}
+
+\textbf{Senior Programmer, Osiz Technologies Pvt Ltd (KOINPARK), Madurai, TN} \hfill \textit{Jun 2024 -- Present}
+\begin{itemize}
+  \item Designed and implemented microservices using Spring Boot and Kafka for high-frequency cryptocurrency trading with 5K+ events/sec throughput.
+  \item Built REST APIs with Swagger/OpenAPI documentation, enabling seamless third-party integrations and supporting 1M+ user transactions.
+  \item Leveraged Domain-Driven Design and bounded contexts to refactor legacy modules for maintainability and scalability.
+  \item Integrated MongoDB with Spring Data JPA for dynamic order book persistence and optimized Redis caching for low-latency access.
+  \item Participated in Agile ceremonies including sprint planning, retrospectives, and daily stand-ups to ensure timely delivery.
+  \item Implemented SQL queries with complex joins, indexing strategies, and stored procedures for trade analytics and reporting.
+\end{itemize}
+
+\textbf{Java Developer, Selica Technology, Bengaluru, Karnataka} \hfill \textit{May 2022 -- Apr 2024}
+\begin{itemize}
+  \item Led end-to-end development of a comprehensive Hospital Management System (HMS) using Spring Boot microservices and React, covering OPD, IPD, Pharmacy, and Billing modules.
+  \item Implemented patient registration, appointment booking, digital prescription, and visit history features for OPD workflows.
+  \item Developed IPD admission, bed allocation/transfer, nursing vitals, treatment tracking, and discharge summary generation with PDF export.
+  \item Built a robust Pharmacy module for inventory management (batch/expiry/stock), prescription fulfillment, sales billing, and returns/refunds with real-time alerts and audit logging.
+  
+  \item Enforced role-based access control and audit trails for sensitive operations, ensuring compliance and traceability.
+  \item Automated deployment with Docker Compose and maintained MySQL databases with advanced queries, indexing, and stored procedures.
+  % \item Collaborated in Agile teams using JIRA, and delivered RESTful APIs with Swagger/OpenAPI for seamless frontend-backend integration.
+\end{itemize}
+
+\textbf{Service Consultant, Royal Enfield (HRIDAAN MOTORS LLP), Pune, Maharashtra} \hfill \textit{Jul 2019 -- May 2021}
+\begin{itemize}
+  \item Leveraged digital systems (DMS) to manage service workflows, analyze diagnostic data, and generate reports — gaining exposure to enterprise software systems.
+  \item Collaborated with technicians, inventory managers, and customer service teams to streamline operations and resolve issues efficiently.
+  \item Identified recurring issues via structured documentation and root cause analysis, leading to preventive solutions.
+  \item Maintained service records and customer logs, practicing disciplined documentation aligned with Agile and ticketing workflows.
+  \item Supported data-driven decisions by evaluating service patterns, warranty claims, and performance trends.
+  \item Attended training sessions on internal tools and systems, demonstrating adaptability and a growth mindset.
+\end{itemize}
+
+%-----------TECHNICAL SKILLS-----------------
+\section{Technical Skills}
+\vspace{6pt}
+\noindent
+\textbf{Programming Languages:} Java (Core, Advanced, Java 8), Python, JavaScript \\
+\vspace{2pt}
+\textbf{Frameworks \& Libraries:} Spring Boot, Spring MVC, Spring Security, Spring Data JPA, Hibernate, Swagger. \\
+\vspace{2pt}
+\textbf{Databases:} MySQL (Joins, Indexing, Stored Procedures), MongoDB, Redis \\
+\vspace{2pt}
+\textbf{DevOps \& Tools:} Git, Maven, Docker, Postman, Kafka, Micrometer, Zipkin, JIRA \\
+\vspace{2pt}
+\textbf{Architecture Concepts:} Microservices, API Gateway, SDLC \\
+\vspace{2pt}
+\textbf{Platforms:} Linux (Ubuntu, CentOS), Windows
+
+%-----------EDUCATION-----------------
+\section{Education}
+\vspace{6pt}
+\noindent
+\textbf{B.E in Automobile Engineering, D. Y. Patil School of Engineering Academy, Pune, Maharashtra} \hfill \textit{} \\
+\textit{CGPA: 8.16/10}
+
+\vspace{6pt}
+
+\noindent
+\textbf{Diploma in Automobile Engineering, G. H. Raisoni Polytechnic College, Nagpur, Maharashtra} \hfill \textit{}
+
+
+% \vspace{16pt}
+% \noindent
+% \textbf{Place:} Nagpur \\
+% \textbf{Name:} Rajkumar Mandal
+
+\end{document}

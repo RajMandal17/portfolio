@@ -10,6 +10,12 @@ export const skillsData = {
           yearsOfExperience: 5
         },
         {
+          name: "Java 8+",
+          proficiency: 90,
+          icon: "fab fa-java",
+          yearsOfExperience: 4
+        },
+        {
           name: "Python",
           proficiency: 80,
           icon: "fab fa-python",
@@ -20,12 +26,6 @@ export const skillsData = {
           proficiency: 75,
           icon: "fab fa-js-square",
           yearsOfExperience: 3
-        },
-        {
-          name: "TypeScript",
-          proficiency: 70,
-          icon: "fab fa-js-square",
-          yearsOfExperience: 2
         }
       ]
     },
@@ -34,15 +34,27 @@ export const skillsData = {
       skills: [
         {
           name: "Spring Boot",
+          proficiency: 95,
+          icon: "fas fa-leaf",
+          yearsOfExperience: 5
+        },
+        {
+          name: "Spring MVC",
           proficiency: 90,
           icon: "fas fa-leaf",
           yearsOfExperience: 4
         },
         {
           name: "Spring Security",
-          proficiency: 85,
+          proficiency: 88,
           icon: "fas fa-shield-alt",
-          yearsOfExperience: 3
+          yearsOfExperience: 4
+        },
+        {
+          name: "Spring Data JPA",
+          proficiency: 90,
+          icon: "fas fa-database",
+          yearsOfExperience: 4
         },
         {
           name: "Hibernate",
@@ -51,10 +63,10 @@ export const skillsData = {
           yearsOfExperience: 4
         },
         {
-          name: "JUnit",
-          proficiency: 80,
-          icon: "fas fa-vial",
-          yearsOfExperience: 4
+          name: "Swagger/OpenAPI",
+          proficiency: 85,
+          icon: "fas fa-file-code",
+          yearsOfExperience: 3
         }
       ]
     },
@@ -62,22 +74,16 @@ export const skillsData = {
       name: "Databases",
       skills: [
         {
-          name: "PostgreSQL",
-          proficiency: 88,
-          icon: "fas fa-database",
-          yearsOfExperience: 4
-        },
-        {
           name: "MySQL",
-          proficiency: 85,
+          proficiency: 90,
           icon: "fas fa-database",
           yearsOfExperience: 5
         },
         {
           name: "MongoDB",
-          proficiency: 75,
+          proficiency: 85,
           icon: "fas fa-leaf",
-          yearsOfExperience: 2
+          yearsOfExperience: 3
         },
         {
           name: "Redis",
@@ -88,14 +94,8 @@ export const skillsData = {
       ]
     },
     {
-      name: "Cloud",
+      name: "DevOps",
       skills: [
-        {
-          name: "AWS",
-          proficiency: 75,
-          icon: "fab fa-aws",
-          yearsOfExperience: 3
-        },
         {
           name: "Docker",
           proficiency: 85,
@@ -103,26 +103,9 @@ export const skillsData = {
           yearsOfExperience: 3
         },
         {
-          name: "Kubernetes",
-          proficiency: 70,
-          icon: "fas fa-dharmachakra",
-          yearsOfExperience: 2
-        },
-        {
-          name: "Jenkins",
-          proficiency: 75,
-          icon: "fas fa-tools",
-          yearsOfExperience: 3
-        }
-      ]
-    },
-    {
-      name: "Tools",
-      skills: [
-        {
-          name: "Apache Kafka",
-          proficiency: 85,
-          icon: "fas fa-stream",
+          name: "Docker Compose",
+          proficiency: 80,
+          icon: "fab fa-docker",
           yearsOfExperience: 3
         },
         {
@@ -138,10 +121,21 @@ export const skillsData = {
           yearsOfExperience: 4
         },
         {
-          name: "Gradle",
+          name: "Linux",
           proficiency: 80,
-          icon: "fas fa-cube",
-          yearsOfExperience: 2
+          icon: "fab fa-linux",
+          yearsOfExperience: 4
+        }
+      ]
+    },
+    {
+      name: "Tools",
+      skills: [
+        {
+          name: "Apache Kafka",
+          proficiency: 90,
+          icon: "fas fa-stream",
+          yearsOfExperience: 3
         },
         {
           name: "Postman",
@@ -150,10 +144,22 @@ export const skillsData = {
           yearsOfExperience: 4
         },
         {
-          name: "IntelliJ IDEA",
-          proficiency: 90,
-          icon: "fas fa-code",
-          yearsOfExperience: 5
+          name: "JIRA",
+          proficiency: 80,
+          icon: "fas fa-tasks",
+          yearsOfExperience: 4
+        },
+        {
+          name: "Micrometer",
+          proficiency: 75,
+          icon: "fas fa-chart-line",
+          yearsOfExperience: 2
+        },
+        {
+          name: "Zipkin",
+          proficiency: 70,
+          icon: "fas fa-search",
+          yearsOfExperience: 2
         }
       ]
     }

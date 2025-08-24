@@ -1,55 +1,65 @@
 export const resumeData = {
-  summary: "Experienced Java Backend Developer with 5+ years of expertise in designing and implementing scalable microservices architectures. Proficient in Spring Boot, Apache Kafka, and distributed systems with a proven track record of delivering high-performance applications that handle millions of requests daily. Strong background in DevOps practices, containerization, and cloud technologies.",
+  summary: "Innovative and detail-oriented Java Backend Developer with experience in designing, developing, and deploying high-performance microservices and enterprise applications using Java 8+, Spring Boot, and Kafka. Proficient in building scalable REST APIs with Swagger/OpenAPI standards, optimizing relational and NoSQL databases, and implementing event-driven architectures. Experienced in domains including finance, healthcare, and supply chain management.",
   
   experience: [
     {
-      title: "Senior Java Backend Developer",
-      company: "TechCorp Solutions",
-      period: "2022 - Present",
+      title: "Senior Programmer",
+      company: "Osiz Technologies Pvt Ltd (KOINPARK), Madurai, TN",
+      period: "Jun 2024 - Present",
       responsibilities: [
-        "Led development of microservices architecture serving 10M+ daily active users",
-        "Implemented Apache Kafka event streaming reducing system latency by 40%",
-        "Designed and deployed containerized applications using Docker and Kubernetes",
-        "Mentored junior developers and established code review best practices",
-        "Optimized database queries and implemented caching strategies improving response times by 60%"
+        "Designed and implemented microservices using Spring Boot and Kafka for high-frequency cryptocurrency trading with 5K+ events/sec throughput",
+        "Built REST APIs with Swagger/OpenAPI documentation, enabling seamless third-party integrations and supporting 1M+ user transactions",
+        "Leveraged Domain-Driven Design and bounded contexts to refactor legacy modules for maintainability and scalability",
+        "Integrated MongoDB with Spring Data JPA for dynamic order book persistence and optimized Redis caching for low-latency access",
+        "Participated in Agile ceremonies including sprint planning, retrospectives, and daily stand-ups to ensure timely delivery",
+        "Implemented SQL queries with complex joins, indexing strategies, and stored procedures for trade analytics and reporting"
       ],
-      technologies: ["Java", "Spring Boot", "Apache Kafka", "Docker", "Kubernetes", "PostgreSQL", "Redis", "AWS"]
+      technologies: ["Java 8+", "Spring Boot", "Apache Kafka", "MongoDB", "Spring Data JPA", "Redis", "Swagger/OpenAPI", "Domain-Driven Design"]
     },
     {
-      title: "Java Backend Developer",
-      company: "InnovateTech Ltd",
-      period: "2020 - 2022",
+      title: "Java Developer",
+      company: "Selica Technology, Bengaluru, Karnataka",
+      period: "May 2022 - Apr 2024",
       responsibilities: [
-        "Developed REST APIs using Spring Boot serving 1M+ requests daily",
-        "Optimized database queries resulting in 60% performance improvement",
-        "Integrated payment gateways and third-party services",
-        "Implemented automated testing strategies achieving 85% code coverage",
-        "Participated in agile development and continuous integration practices"
+        "Led end-to-end development of a comprehensive Hospital Management System (HMS) using Spring Boot microservices and React",
+        "Implemented patient registration, appointment booking, digital prescription, and visit history features for OPD workflows",
+        "Developed IPD admission, bed allocation/transfer, nursing vitals, treatment tracking, and discharge summary generation with PDF export",
+        "Built a robust Pharmacy module for inventory management (batch/expiry/stock), prescription fulfillment, sales billing, and returns/refunds with real-time alerts and audit logging",
+        "Enforced role-based access control and audit trails for sensitive operations, ensuring compliance and traceability",
+        "Automated deployment with Docker Compose and maintained MySQL databases with advanced queries, indexing, and stored procedures"
       ],
-      technologies: ["Java", "Spring Boot", "MySQL", "MongoDB", "JUnit", "Maven", "Jenkins"]
+      technologies: ["Spring Boot", "React", "MySQL", "Docker Compose", "Spring Security", "PDF Export", "Role-based Access Control"]
     },
     {
-      title: "Junior Java Developer",
-      company: "StartupTech Inc",
-      period: "2019 - 2020",
+      title: "Service Consultant",
+      company: "Royal Enfield (HRIDAAN MOTORS LLP), Pune, Maharashtra",
+      period: "Jul 2019 - May 2021",
       responsibilities: [
-        "Built web applications using Java and Spring framework",
-        "Collaborated with frontend teams to develop full-stack solutions",
-        "Participated in code reviews and maintained documentation",
-        "Implemented bug fixes and feature enhancements",
-        "Learned and applied software development best practices"
+        "Leveraged digital systems (DMS) to manage service workflows, analyze diagnostic data, and generate reports",
+        "Collaborated with technicians, inventory managers, and customer service teams to streamline operations and resolve issues efficiently",
+        "Identified recurring issues via structured documentation and root cause analysis, leading to preventive solutions",
+        "Maintained service records and customer logs, practicing disciplined documentation aligned with Agile and ticketing workflows",
+        "Supported data-driven decisions by evaluating service patterns, warranty claims, and performance trends",
+        "Attended training sessions on internal tools and systems, demonstrating adaptability and a growth mindset"
       ],
-      technologies: ["Java", "Spring Framework", "MySQL", "HTML", "CSS", "JavaScript"]
+      technologies: ["DMS", "Digital Systems", "Data Analysis", "Documentation", "Process Optimization", "Customer Service Systems"]
     }
   ],
   
   education: [
     {
-      degree: "Bachelor of Technology",
-      field: "Computer Science & Engineering",
-      institution: "Indian Institute of Technology",
+      degree: "B.E in Automobile Engineering",
+      field: "Automobile Engineering",
+      institution: "D. Y. Patil School of Engineering Academy, Pune, Maharashtra",
       period: "2016 - 2020",
-      gpa: "8.5/10"
+      gpa: "8.16/10"
+    },
+    {
+      degree: "Diploma",
+      field: "Automobile Engineering",
+      institution: "G. H. Raisoni Polytechnic College, Nagpur, Maharashtra",
+      period: "2013 - 2016",
+      gpa: null
     }
   ]
 };

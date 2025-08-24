@@ -17,7 +17,10 @@ export default function Contributions() {
   const { data: contributions, isLoading, error } = useQuery({
     queryKey: ['github', 'contributions'],
     queryFn: () => fetchGitHubContributions('rajkumarmandal17'),
-    staleTime: 1000 * 60 * 30, // 30 minutes
+    staleTime: 1000 * 60 * 10, // 10 minutes - more frequent updates
+    refetchOnWindowFocus: true, // Refetch when window regains focus
+    refetchOnMount: true, // Always refetch on component mount
+    refetchInterval: 1000 * 60 * 15, // Auto-refetch every 15 minutes
   });
 
   useEffect(() => {
