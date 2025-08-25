@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajkumar Mandal - Java Backend Developer | Spring Boot | Microservices</title>
+    <meta name="description" content="Rajkumar Mandal - Expert Java Backend Developer specializing in Microservices, Spring Boot, and Kafka. View portfolio, resume, and GitHub contributions.">
+    <meta name="keywords" content="Rajkumar Mandal, Java Backend Developer, Spring Boot, Microservices, Kafka, Software Engineer">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand': {
+                            50: '#f0f9ff',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'typing': 'typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        typing: {
+                            'from': { width: '0' },
+                            'to': { width: '100%' }
+                        },
+                        'blink-caret': {
+                            'from, to': { 'border-color': 'transparent' },
+                            '50%': { 'border-color': '#0ea5e9' }
+                        }
+                    }
+                }
+            },
+            darkMode: 'class',
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="font-inter bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 transition-colors duration-300">
+    
+    <!-- @COMPONENT: Navigation [sticky navbar with GitHub repos dropdown] -->
+    <nav class="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border-b border-slate-200 dark:border-slate-700">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-xl font-bold text-brand-600 dark:text-brand-400">
+                    Rajkumar Mandal
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Home</a>
+                    <a href="#resume" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Resume</a>
+                    <a href="#skills" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Skills</a>
+                    
+                    <!-- GitHub Repositories Dropdown -->
+                    <div class="relative group">
+                        <button class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors flex items-center">
+                            GitHub
+                            <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-white dark:bg-slate-800 rounded-lg shadow-lg border border-slate-200 dark:border-slate-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <div class="py-2" data-mock="true" data-implementation="Fetch from GitHub API: https://api.github.com/users/rajkumarmandal17/repos">
+                                <a href="https://github.com/rajkumarmandal17/spring-boot-microservices" target="_blank" class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700">spring-boot-microservices</a>
+                                <a href="https://github.com/rajkumarmandal17/kafka-event-streaming" target="_blank" class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700">kafka-event-streaming</a>
+                                <a href="https://github.com/rajkumarmandal17/rest-api-gateway" target="_blank" class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700">rest-api-gateway</a>
+                                <a href="https://github.com/rajkumarmandal17/docker-compose-stack" target="_blank" class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700">docker-compose-stack</a>
+                                <div class="border-t border-slate-200 dark:border-slate-600 mt-2 pt-2">
+                                    <a href="https://github.com/rajkumarmandal17" target="_blank" class="block px-4 py-2 text-sm text-brand-600 dark:text-brand-400 hover:bg-slate-50 dark:hover:bg-slate-700">
+                                        <i class="fab fa-github mr-2"></i>View All Repositories
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contributions" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Contributions</a>
+                    <a href="#contact" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Contact</a>
+                    
+                    <!-- Dark Mode Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-700 hidden">
+            <div class="px-4 py-4 space-y-4">
+                <a href="#home" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400">Home</a>
+                <a href="#resume" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400">Resume</a>
+                <a href="#skills" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400">Skills</a>
+                <a href="#contributions" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400">Contributions</a>
+                <a href="#contact" class="block text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+    
+    <!-- @COMPONENT: Hero Section [animated typing effect and background] -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 relative overflow-hidden">
+        <!-- Background Animation -->
+        <div class="absolute inset-0 opacity-30">
+            <div class="absolute -top-40 -right-40 w-80 h-80 bg-brand-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+            <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="animate-fade-in">
+                <!-- Professional Photo Placeholder -->
+                <div class="w-40 h-40 mx-auto mb-8 rounded-full bg-gradient-to-br from-brand-500 to-brand-600 flex items-center justify-center shadow-2xl">
+                    <i class="fas fa-user text-white text-4xl" data-implementation="Replace with actual professional photo"></i>
+                </div>
+                
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-slate-100 mb-6">
+                    Rajkumar Mandal
+                </h1>
+                
+                <!-- Animated Typing Effect -->
+                <div class="text-xl sm:text-2xl lg:text-3xl text-slate-600 dark:text-slate-400 mb-8 h-16 flex items-center justify-center">
+                    <span id="typed-text" class="border-r-2 border-brand-500" data-implementation="Implement typing animation: Java Backend Developer | Microservices | Spring Boot | Kafka">
+                        Java Backend Developer | Microservices | Spring Boot | Kafka
+                    </span>
+                </div>
+                
+                <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-12" data-mock="true">
+                    Passionate backend developer with expertise in building scalable microservices architectures. 
+                    Experienced in Spring Boot, Apache Kafka, and cloud-native technologies with a focus on high-performance systems.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" class="bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl">
+                        Get In Touch
+                    </a>
+                    <a href="#resume" data-implementation="Should trigger PDF download" class="bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 px-8 py-4 rounded-lg font-semibold border border-slate-300 dark:border-slate-600 hover:border-brand-500 dark:hover:border-brand-400 transition-colors duration-300 shadow-lg hover:shadow-xl">
+                        <i class="fas fa-download mr-2"></i>Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+    
+    <!-- @COMPONENT: Resume Section [structured UI from LaTeX resume] -->
+    <section id="resume" class="py-20 bg-white dark:bg-slate-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4">Resume</h2>
+                <p class="text-lg text-slate-600 dark:text-slate-400">My professional journey and experience</p>
+            </div>
+            
+            <!-- Professional Summary -->
+            <div class="mb-16 animate-slide-up">
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-4">Professional Summary</h3>
+                    <p class="text-slate-700 dark:text-slate-300 leading-relaxed" data-mock="true">
+                        Experienced Java Backend Developer with 5+ years of expertise in designing and implementing scalable microservices architectures. 
+                        Proficient in Spring Boot, Apache Kafka, and distributed systems with a proven track record of delivering high-performance 
+                        applications that handle millions of requests daily. Strong background in DevOps practices, containerization, and cloud technologies.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Work Experience Timeline -->
+            <div class="mb-16 animate-slide-up">
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-8">Work Experience</h3>
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-brand-500"></div>
+                    
+                    <!-- @MAP: workExperience.map(job => ( -->
+                    <div class="relative pl-12 pb-12" data-mock="true">
+                        <div class="absolute left-0 top-2 w-8 h-8 bg-brand-500 rounded-full border-4 border-white dark:border-slate-900 shadow-lg"></div>
+                        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                                <h4 class="text-xl font-bold text-slate-900 dark:text-slate-100">Senior Java Backend Developer</h4>
+                                <span class="text-sm text-brand-600 dark:text-brand-400 font-semibold">2022 - Present</span>
+                            </div>
+                            <p class="text-lg text-slate-600 dark:text-slate-400 mb-3">TechCorp Solutions</p>
+                            <ul class="text-slate-700 dark:text-slate-300 space-y-2">
+                                <li class="flex items-start"><i class="fas fa-chevron-right text-brand-500 mr-2 mt-1"></i>Led development of microservices architecture serving 10M+ daily active users</li>
+                                <li class="flex items-start"><i class="fas fa-chevron-right text-brand-500 mr-2 mt-1"></i>Implemented Apache Kafka event streaming reducing system latency by 40%</li>
+                                <li class="flex items-start"><i class="fas fa-chevron-right text-brand-500 mr-2 mt-1"></i>Designed and deployed containerized applications using Docker and Kubernetes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="relative pl-12 pb-12" data-mock="true">
+                        <div class="absolute left-0 top-2 w-8 h-8 bg-brand-500 rounded-full border-4 border-white dark:border-slate-900 shadow-lg"></div>
+                        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                                <h4 class="text-xl font-bold text-slate-900 dark:text-slate-100">Java Backend Developer</h4>
+                                <span class="text-sm text-brand-600 dark:text-brand-400 font-semibold">2020 - 2022</span>
+                            </div>
+                            <p class="text-lg text-slate-600 dark:text-slate-400 mb-3">InnovateTech Ltd</p>
+                            <ul class="text-slate-700 dark:text-slate-300 space-y-2">
+                                <li class="flex items-start"><i class="fas fa-chevron-right text-brand-500 mr-2 mt-1"></i>Developed REST APIs using Spring Boot serving 1M+ requests daily</li>
+                                <li class="flex items-start"><i class="fas fa-chevron-right text-brand-500 mr-2 mt-1"></i>Optimized database queries resulting in 60% performance improvement</li>
+                                <li class="flex items-start"><i class="fas fa-chevron-right text-brand-500 mr-2 mt-1"></i>Integrated payment gateways and third-party services</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- @END_MAP )) -->
+                </div>
+            </div>
+            
+            <!-- Education -->
+            <div class="animate-slide-up">
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-8">Education</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg" data-mock="true">
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">Bachelor of Technology</h4>
+                        <p class="text-brand-600 dark:text-brand-400 font-semibold mb-2">Computer Science & Engineering</p>
+                        <p class="text-slate-600 dark:text-slate-400 mb-2">Indian Institute of Technology</p>
+                        <p class="text-sm text-slate-500 dark:text-slate-500">2016 - 2020 | CGPA: 8.5/10</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Resume Section -->
+    
+    <!-- @COMPONENT: Skills Section [dynamic badges from LinkedIn] -->
+    <section id="skills" class="py-20 bg-slate-50 dark:bg-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4">Technical Skills</h2>
+                <p class="text-lg text-slate-600 dark:text-slate-400">Technologies and tools I work with</p>
+            </div>
+            
+            <!-- Skills Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 animate-slide-up" data-implementation="Fetch from LinkedIn API or fallback to resume data">
+                
+                <!-- Core Languages -->
+                <div class="bg-white dark:bg-slate-700 rounded-lg p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="flex items-center justify-center mb-3">
+                        <i class="fab fa-java text-3xl text-orange-500 group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <p class="text-center font-semibold text-slate-900 dark:text-slate-100">Java</p>
+                    <div class="w-full bg-slate-200 dark:bg-slate-600 rounded-full h-2 mt-2">
+                        <div class="bg-orange-500 h-2 rounded-full" style="width: 95%"></div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-slate-700 rounded-lg p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="flex items-center justify-center mb-3">
+                        <i class="fas fa-leaf text-3xl text-green-500 group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <p class="text-center font-semibold text-slate-900 dark:text-slate-100">Spring Boot</p>
+                    <div class="w-full bg-slate-200 dark:bg-slate-600 rounded-full h-2 mt-2">
+                        <div class="bg-green-500 h-2 rounded-full" style="width: 90%"></div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-slate-700 rounded-lg p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="flex items-center justify-center mb-3">
+                        <i class="fas fa-stream text-3xl text-purple-500 group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <p class="text-center font-semibold text-slate-900 dark:text-slate-100">Apache Kafka</p>
+                    <div class="w-full bg-slate-200 dark:bg-slate-600 rounded-full h-2 mt-2">
+                        <div class="bg-purple-500 h-2 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-slate-700 rounded-lg p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="flex items-center justify-center mb-3">
+                        <i class="fab fa-docker text-3xl text-blue-500 group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <p class="text-center font-semibold text-slate-900 dark:text-slate-100">Docker</p>
+                    <div class="w-full bg-slate-200 dark:bg-slate-600 rounded-full h-2 mt-2">
+                        <div class="bg-blue-500 h-2 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-slate-700 rounded-lg p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="flex items-center justify-center mb-3">
+                        <i class="fas fa-database text-3xl text-indigo-500 group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <p class="text-center font-semibold text-slate-900 dark:text-slate-100">PostgreSQL</p>
+                    <div class="w-full bg-slate-200 dark:bg-slate-600 rounded-full h-2 mt-2">
+                        <div class="bg-indigo-500 h-2 rounded-full" style="width: 88%"></div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-slate-700 rounded-lg p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="flex items-center justify-center mb-3">
+                        <i class="fas fa-fire text-3xl text-red-500 group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <p class="text-center font-semibold text-slate-900 dark:text-slate-100">Redis</p>
+                    <div class="w-full bg-slate-200 dark:bg-slate-600 rounded-full h-2 mt-2">
+                        <div class="bg-red-500 h-2 rounded-full" style="width: 75%"></div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-slate-700 rounded-lg p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="flex items-center justify-center mb-3">
+                        <i class="fab fa-aws text-3xl text-orange-400 group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <p class="text-center font-semibold text-slate-900 dark:text-slate-100">AWS</p>
+                    <div class="w-full bg-slate-200 dark:bg-slate-600 rounded-full h-2 mt-2">
+                        <div class="bg-orange-400 h-2 rounded-full" style="width: 70%"></div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-slate-700 rounded-lg p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="flex items-center justify-center mb-3">
+                        <i class="fas fa-dharmachakra text-3xl text-blue-600 group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <p class="text-center font-semibold text-slate-900 dark:text-slate-100">Kubernetes</p>
+                    <div class="w-full bg-slate-200 dark:bg-slate-600 rounded-full h-2 mt-2">
+                        <div class="bg-blue-600 h-2 rounded-full" style="width: 65%"></div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-slate-700 rounded-lg p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="flex items-center justify-center mb-3">
+                        <i class="fab fa-git-alt text-3xl text-red-600 group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <p class="text-center font-semibold text-slate-900 dark:text-slate-100">Git</p>
+                    <div class="w-full bg-slate-200 dark:bg-slate-600 rounded-full h-2 mt-2">
+                        <div class="bg-red-600 h-2 rounded-full" style="width: 95%"></div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-slate-700 rounded-lg p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="flex items-center justify-center mb-3">
+                        <i class="fas fa-code-branch text-3xl text-green-600 group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <p class="text-center font-semibold text-slate-900 dark:text-slate-100">Microservices</p>
+                    <div class="w-full bg-slate-200 dark:bg-slate-600 rounded-full h-2 mt-2">
+                        <div class="bg-green-600 h-2 rounded-full" style="width: 90%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Skills Section -->
+    
+    <!-- @COMPONENT: GitHub Section [repositories and stats] -->
+    <section id="github" class="py-20 bg-white dark:bg-slate-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4">GitHub Projects</h2>
+                <p class="text-lg text-slate-600 dark:text-slate-400">Featured repositories and open source contributions</p>
+            </div>
+            
+            <!-- GitHub Stats Cards -->
+            <div class="grid md:grid-cols-3 gap-6 mb-16 animate-slide-up" data-implementation="Fetch live stats from GitHub API">
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-slate-800 dark:to-slate-700 rounded-xl p-6 text-center shadow-lg">
+                    <i class="fas fa-code text-4xl text-blue-600 dark:text-blue-400 mb-4"></i>
+                    <h3 class="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-2" data-bind="github.totalCommits">2,847</h3>
+                    <p class="text-slate-600 dark:text-slate-400">Total Commits</p>
+                </div>
+                <div class="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-slate-800 dark:to-slate-700 rounded-xl p-6 text-center shadow-lg">
+                    <i class="fas fa-star text-4xl text-green-600 dark:text-green-400 mb-4"></i>
+                    <h3 class="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-2" data-bind="github.totalStars">156</h3>
+                    <p class="text-slate-600 dark:text-slate-400">GitHub Stars</p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-50 to-violet-100 dark:from-slate-800 dark:to-slate-700 rounded-xl p-6 text-center shadow-lg">
+                    <i class="fas fa-code-branch text-4xl text-purple-600 dark:text-purple-400 mb-4"></i>
+                    <h3 class="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-2" data-bind="github.totalRepos">23</h3>
+                    <p class="text-slate-600 dark:text-slate-400">Public Repositories</p>
+                </div>
+            </div>
+            
+            <!-- Featured Repositories -->
+            <div class="grid lg:grid-cols-2 gap-8 animate-slide-up" data-implementation="Fetch top repositories from GitHub REST API">
+                <!-- @MAP: featuredRepos.map(repo => ( -->
+                <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-700" data-mock="true">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">spring-boot-microservices</h3>
+                            <p class="text-slate-600 dark:text-slate-400 mb-4">Comprehensive microservices architecture implementation using Spring Boot, with service discovery, API Gateway, and distributed tracing.</p>
+                        </div>
+                        <a href="https://github.com/rajkumarmandal17/spring-boot-microservices" target="_blank" class="text-slate-400 hover:text-brand-500 transition-colors">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-4 text-sm text-slate-500 dark:text-slate-400">
+                            <span class="flex items-center">
+                                <span class="w-3 h-3 bg-orange-500 rounded-full mr-2"></span>
+                                Java
+                            </span>
+                            <span class="flex items-center">
+                                <i class="fas fa-star mr-1"></i>
+                                42
+                            </span>
+                            <span class="flex items-center">
+                                <i class="fas fa-code-branch mr-1"></i>
+                                12
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-700" data-mock="true">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">kafka-event-streaming</h3>
+                            <p class="text-slate-600 dark:text-slate-400 mb-4">Real-time event streaming platform using Apache Kafka with Spring Boot integration for high-throughput data processing.</p>
+                        </div>
+                        <a href="https://github.com/rajkumarmandal17/kafka-event-streaming" target="_blank" class="text-slate-400 hover:text-brand-500 transition-colors">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-4 text-sm text-slate-500 dark:text-slate-400">
+                            <span class="flex items-center">
+                                <span class="w-3 h-3 bg-orange-500 rounded-full mr-2"></span>
+                                Java
+                            </span>
+                            <span class="flex items-center">
+                                <i class="fas fa-star mr-1"></i>
+                                28
+                            </span>
+                            <span class="flex items-center">
+                                <i class="fas fa-code-branch mr-1"></i>
+                                8
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_MAP )) -->
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://github.com/rajkumarmandal17" target="_blank" class="inline-flex items-center bg-slate-900 dark:bg-slate-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-slate-800 dark:hover:bg-slate-600 transition-colors duration-300 shadow-lg hover:shadow-xl">
+                    <i class="fab fa-github mr-2 text-xl"></i>
+                    View All Repositories
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: GitHub Section -->
+    
+    <!-- @COMPONENT: GitHub Contributions [heatmap calendar] -->
+    <section id="contributions" class="py-20 bg-slate-50 dark:bg-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4">GitHub Contributions</h2>
+                <p class="text-lg text-slate-600 dark:text-slate-400">My coding activity over the past year</p>
+            </div>
+            
+            <!-- Contributions Summary -->
+            <div class="bg-white dark:bg-slate-700 rounded-xl p-8 mb-8 shadow-lg animate-slide-up" data-implementation="Fetch from GitHub GraphQL API">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-1" data-bind="contributions.totalYear">1,247</h3>
+                        <p class="text-slate-600 dark:text-slate-400">Contributions in 2024</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-1" data-bind="contributions.longestStreak">28</h3>
+                        <p class="text-slate-600 dark:text-slate-400">Longest Streak</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-1" data-bind="contributions.currentStreak">5</h3>
+                        <p class="text-slate-600 dark:text-slate-400">Current Streak</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-1" data-bind="contributions.avgPerDay">3.4</h3>
+                        <p class="text-slate-600 dark:text-slate-400">Average per Day</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contributions Heatmap -->
+            <div class="bg-white dark:bg-slate-700 rounded-xl p-8 shadow-lg animate-slide-up" data-implementation="Render using GitHub GraphQL API data with cal-heatmap library">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100">Contribution Activity</h3>
+                    <div class="flex items-center space-x-2 text-sm text-slate-600 dark:text-slate-400">
+                        <span>Less</span>
+                        <div class="flex space-x-1">
+                            <div class="w-3 h-3 bg-slate-200 dark:bg-slate-600 rounded-sm"></div>
+                            <div class="w-3 h-3 bg-green-200 dark:bg-green-800 rounded-sm"></div>
+                            <div class="w-3 h-3 bg-green-400 dark:bg-green-600 rounded-sm"></div>
+                            <div class="w-3 h-3 bg-green-600 dark:bg-green-400 rounded-sm"></div>
+                            <div class="w-3 h-3 bg-green-800 dark:bg-green-200 rounded-sm"></div>
+                        </div>
+                        <span>More</span>
+                    </div>
+                </div>
+                
+                <!-- Heatmap Grid - Mock representation -->
+                <div class="overflow-x-auto" data-mock="true" data-implementation="Replace with actual GitHub contributions heatmap using GraphQL API">
+                    <div class="inline-flex flex-col space-y-1 text-xs">
+                        <!-- Month labels -->
+                        <div class="flex ml-8 space-x-1">
+                            <div class="w-16 text-slate-500 dark:text-slate-400">Jan</div>
+                            <div class="w-16 text-slate-500 dark:text-slate-400">Feb</div>
+                            <div class="w-16 text-slate-500 dark:text-slate-400">Mar</div>
+                            <div class="w-16 text-slate-500 dark:text-slate-400">Apr</div>
+                            <div class="w-16 text-slate-500 dark:text-slate-400">May</div>
+                            <div class="w-16 text-slate-500 dark:text-slate-400">Jun</div>
+                            <div class="w-16 text-slate-500 dark:text-slate-400">Jul</div>
+                            <div class="w-16 text-slate-500 dark:text-slate-400">Aug</div>
+                            <div class="w-16 text-slate-500 dark:text-slate-400">Sep</div>
+                            <div class="w-16 text-slate-500 dark:text-slate-400">Oct</div>
+                            <div class="w-16 text-slate-500 dark:text-slate-400">Nov</div>
+                            <div class="w-16 text-slate-500 dark:text-slate-400">Dec</div>
+                        </div>
+                        
+                        <!-- Week rows -->
+                        <div class="flex">
+                            <!-- Day labels -->
+                            <div class="flex flex-col space-y-1 pr-2 text-slate-500 dark:text-slate-400">
+                                <div class="h-3"></div>
+                                <div class="h-3">Mon</div>
+                                <div class="h-3"></div>
+                                <div class="h-3">Wed</div>
+                                <div class="h-3"></div>
+                                <div class="h-3">Fri</div>
+                                <div class="h-3"></div>
+                            </div>
+                            
+                            <!-- Grid of contribution squares -->
+                            <div class="grid grid-rows-7 grid-flow-col gap-1">
+                                <!-- Generate 52 weeks × 7 days = 364 squares with varying contribution levels -->
+                                <div class="w-3 h-3 bg-slate-200 dark:bg-slate-600 rounded-sm"></div>
+                                <div class="w-3 h-3 bg-green-200 dark:bg-green-800 rounded-sm"></div>
+                                <div class="w-3 h-3 bg-green-400 dark:bg-green-600 rounded-sm"></div>
+                                <div class="w-3 h-3 bg-green-600 dark:bg-green-400 rounded-sm"></div>
+                                <div class="w-3 h-3 bg-green-800 dark:bg-green-200 rounded-sm"></div>
+                                <div class="w-3 h-3 bg-green-400 dark:bg-green-600 rounded-sm"></div>
+                                <div class="w-3 h-3 bg-slate-200 dark:bg-slate-600 rounded-sm"></div>
+                                <!-- Continue pattern for visual representation -->
+                                <!-- This would be dynamically generated from actual GitHub data -->
+                                <div class="w-3 h-3 bg-green-600 dark:bg-green-400 rounded-sm"></div>
+                                <div class="w-3 h-3 bg-green-200 dark:bg-green-800 rounded-sm"></div>
+                                <div class="w-3 h-3 bg-green-800 dark:bg-green-200 rounded-sm"></div>
+                                <!-- ... more squares would be generated programmatically ... -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="text-sm text-slate-600 dark:text-slate-400 mt-4">
+                    Data fetched from GitHub GraphQL API • Updated daily
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: GitHub Contributions -->
+    
+    <!-- @COMPONENT: Contact Section [contact form and links] -->
+    <section id="contact" class="py-20 bg-white dark:bg-slate-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4">Get In Touch</h2>
+                <p class="text-lg text-slate-600 dark:text-slate-400">Let's discuss opportunities and collaborations</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div class="animate-slide-up">
+                    <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-8">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-brand-100 dark:bg-brand-900 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-brand-600 dark:text-brand-400"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-slate-900 dark:text-slate-100">Email</p>
+                                <a href="mailto:Rajmandal14792@gmail.com" class="text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Rajmandal14792@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-brand-100 dark:bg-brand-900 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-brand-600 dark:text-brand-400"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-slate-900 dark:text-slate-100">Phone</p>
+                                <a href="tel:+918793148668" class="text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">+91 8793148668</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-brand-100 dark:bg-brand-900 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fab fa-linkedin text-brand-600 dark:text-brand-400"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-slate-900 dark:text-slate-100">LinkedIn</p>
+                                <a href="https://linkedin.com/in/rajkumarmandal17" target="_blank" class="text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">linkedin.com/in/rajkumarmandal17</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-brand-100 dark:bg-brand-900 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fab fa-github text-brand-600 dark:text-brand-400"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-slate-900 dark:text-slate-100">GitHub</p>
+                                <a href="https://github.com/rajkumarmandal17" target="_blank" class="text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">github.com/rajkumarmandal17</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="animate-slide-up">
+                    <form class="space-y-6" data-implementation="Integrate with EmailJS or Formspree for form submission">
+                        <div>
+                            <label for="name" class="block text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-colors" placeholder="Your full name">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-colors" placeholder="your.email@example.com">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-colors resize-none" placeholder="Tell me about your project or opportunity..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-brand-500 hover:bg-brand-600 text-white py-4 px-6 rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl" data-event="click:handleSubmit">
+                            <i class="fas fa-paper-plane mr-2"></i>Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Contact Section -->
+    
+    <!-- @COMPONENT: Footer [copyright and quick links] -->
+    <footer class="bg-slate-900 dark:bg-slate-950 text-slate-300 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Rajkumar Mandal</h3>
+                    <p class="text-slate-400 mb-4">Java Backend Developer specializing in microservices and distributed systems.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/rajkumarmandal17" target="_blank" class="text-slate-400 hover:text-white transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/rajkumarmandal17" target="_blank" class="text-slate-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="mailto:Rajmandal14792@gmail.com" class="text-slate-400 hover:text-white transition-colors">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-slate-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#resume" class="text-slate-400 hover:text-white transition-colors">Resume</a></li>
+                        <li><a href="#skills" class="text-slate-400 hover:text-white transition-colors">Skills</a></li>
+                        <li><a href="#contributions" class="text-slate-400 hover:text-white transition-colors">Contributions</a></li>
+                        <li><a href="#contact" class="text-slate-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Technologies</h3>
+                    <ul class="space-y-2">
+                        <li class="text-slate-400">Java & Spring Boot</li>
+                        <li class="text-slate-400">Apache Kafka</li>
+                        <li class="text-slate-400">Microservices</li>
+                        <li class="text-slate-400">Docker & Kubernetes</li>
+                        <li class="text-slate-400">AWS Cloud</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 mt-12 pt-8 text-center">
+                <p class="text-slate-400">
+                    &copy; 2024 Rajkumar Mandal. All rights reserved. • Built with React & Tailwind CSS • Deployed on GitHub Pages
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <!-- JavaScript for interactions -->
+    <script>
+        // Dark mode toggle
+        (function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const html = document.documentElement;
+            
+            // Check for saved theme preference or default to 'light'
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            html.classList.toggle('dark', currentTheme === 'dark');
+            
+            themeToggle.addEventListener('click', function() {
+                html.classList.toggle('dark');
+                const theme = html.classList.contains('dark') ? 'dark' : 'light';
+                localStorage.setItem('theme', theme);
+            });
+        })();
+
+        // Mobile menu toggle
+        (function() {
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuToggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        })();
+
+        // Smooth scrolling for navigation links
+        (function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        })();
+
+        // Animated typing effect (simplified version)
+        (function() {
+            const typedText = document.getElementById('typed-text');
+            const texts = [
+                'Java Backend Developer',
+                'Microservices Architect', 
+                'Spring Boot Expert',
+                'Apache Kafka Specialist'
+            ];
+            let textIndex = 0;
+            let charIndex = 0;
+            
+            function typeText() {
+                if (charIndex < texts[textIndex].length) {
+                    typedText.textContent += texts[textIndex].charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeText, 100);
+                } else {
+                    setTimeout(eraseText, 2000);
+                }
+            }
+            
+            function eraseText() {
+                if (charIndex > 0) {
+                    typedText.textContent = texts[textIndex].substring(0, charIndex - 1);
+                    charIndex--;
+                    setTimeout(eraseText, 50);
+                } else {
+                    textIndex = (textIndex + 1) % texts.length;
+                    setTimeout(typeText, 500);
+                }
+            }
+            
+            // Start the animation
+            setTimeout(typeText, 1000);
+        })();
+
+        // TODO: Implement GitHub API integrations
+        // TODO: Implement LinkedIn skills fetching
+        // TODO: Implement contact form submission
+        // TODO: Implement GitHub contributions heatmap
+        // TODO: Add loading states for dynamic content
+        // TODO: Add error handling for API failures
+        
+        console.log('Portfolio loaded successfully! 🚀');
+        console.log('API integrations needed:');
+        console.log('- GitHub REST API for repositories');
+        console.log('- GitHub GraphQL API for contributions');
+        console.log('- LinkedIn API or third-party service for skills');
+        console.log('- EmailJS/Formspree for contact form');
+    </script>
+</body>
+</html>
