@@ -51,14 +51,14 @@ export const resumeData = {
       degree: "B.E in Automobile Engineering",
       field: "Automobile Engineering",
       institution: "D. Y. Patil School of Engineering Academy, Pune, Maharashtra",
-      period: "2016 - 2020",
+      period: "2018 - 2022",
       gpa: "8.16/10"
     },
     {
       degree: "Diploma",
       field: "Automobile Engineering",
       institution: "G. H. Raisoni Polytechnic College, Nagpur, Maharashtra",
-      period: "2013 - 2016",
+      period: "2014 - 2017",
       gpa: null
     }
   ]
