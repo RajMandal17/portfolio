@@ -34,7 +34,7 @@ export default function Hero() {
           {/* Professional Photo */}
           <div className="w-40 h-40 mx-auto mb-8 rounded-full bg-gradient-to-br from-brand-500 to-brand-600 flex items-center justify-center shadow-2xl overflow-hidden">
             <img
-              src="https://drive.google.com/uc?export=view&id=1b2ABqLuhh9b4p9Tu7Pw5ovygtiDWuKvj"
+              src="/rajPic.jpeg"
               alt="Rajkumar Mandal profile photo"
               className="object-cover w-full h-full"
               data-testid="profile-photo"
