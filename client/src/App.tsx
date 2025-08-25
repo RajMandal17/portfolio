@@ -20,7 +20,6 @@ function Router() {
     </Switch>
   );
 }
-}
 
 function App() {
   return (
