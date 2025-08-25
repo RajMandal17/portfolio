@@ -45,7 +45,7 @@ export default function Footer() {
                 data-testid="footer-github"
               >
                 <a
-                  href="https://github.com/rajkumarmandal17"
+                  href="https://https://github.com/RajMandal17"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
