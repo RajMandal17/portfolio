@@ -38,6 +38,11 @@ export default function Hero() {
               alt="Rajkumar Mandal profile photo"
               className="object-cover w-full h-full"
               data-testid="profile-photo"
+              onError={e => {
+                const target = e.currentTarget;
+                target.onerror = null;
+                target.src = 'https://drive.google.com/uc?export=view&id=1b2ABqLuhh9b4p9Tu7Pw5ovygtiDWuKvj';
+              }}
             />
           </div>
           
