@@ -34,7 +34,7 @@ export default function Hero() {
           {/* Professional Photo */}
           <div className="w-40 h-40 mx-auto mb-8 rounded-full bg-gradient-to-br from-brand-500 to-brand-600 flex items-center justify-center shadow-2xl overflow-hidden">
             <img
-              src="/rajPic.jpeg"
+              src={import.meta.env.BASE_URL + "rajPic.jpeg"}
               alt="Rajkumar Mandal profile photo"
               className="object-cover w-full h-full"
               data-testid="profile-photo"
