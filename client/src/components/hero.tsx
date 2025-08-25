@@ -11,11 +11,7 @@ export default function Hero() {
   };
 
   const downloadResume = () => {
-    // In a real implementation, this would download the actual PDF resume
-    const link = document.createElement('a');
-    link.href = '/resume.pdf'; // This would be the actual resume PDF path
-    link.download = 'Rajkumar_Mandal_Resume.pdf';
-    link.click();
+    window.open('https://drive.google.com/file/d/1aDsPRNk0zEOa_Bp0ndqPCk8ZA6xFQirc/view?usp=sharing', '_blank');
   };
 
   return (
