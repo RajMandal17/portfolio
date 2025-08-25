@@ -31,9 +31,14 @@ export default function Hero() {
       
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="animate-fade-in">
-          {/* Professional Photo Placeholder */}
-          <div className="w-40 h-40 mx-auto mb-8 rounded-full bg-gradient-to-br from-brand-500 to-brand-600 flex items-center justify-center shadow-2xl">
-            <User className="text-white text-4xl w-16 h-16" data-testid="profile-photo" />
+          {/* Professional Photo */}
+          <div className="w-40 h-40 mx-auto mb-8 rounded-full bg-gradient-to-br from-brand-500 to-brand-600 flex items-center justify-center shadow-2xl overflow-hidden">
+            <img
+              src="https://drive.google.com/uc?export=view&id=1b2ABqLuhh9b4p9Tu7Pw5ovygtiDWuKvj"
+              alt="Rajkumar Mandal profile photo"
+              className="object-cover w-full h-full"
+              data-testid="profile-photo"
+            />
           </div>
           
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-slate-100 mb-6">
