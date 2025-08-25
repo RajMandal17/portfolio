@@ -10,6 +10,8 @@ import NotFound from "@/pages/not-found";
 
 function Router() {
   const [location] = useHashLocation();
+  // Debug log to help diagnose routing issues
+  console.log('Current hash location:', location);
   return (
     <Switch location={location}>
       <Route path="/" component={Home} />
