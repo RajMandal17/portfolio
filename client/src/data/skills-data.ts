@@ -102,6 +102,7 @@ export const skillsData = {
           icon: "fab fa-docker",
           yearsOfExperience: 3
         },
+        
         {
           name: "Docker Compose",
           proficiency: 80,
@@ -125,6 +126,31 @@ export const skillsData = {
           proficiency: 80,
           icon: "fab fa-linux",
           yearsOfExperience: 4
+        }
+        ,
+        {
+          name: "AWS EC2",
+          proficiency: 75,
+          icon: "fab fa-aws",
+          yearsOfExperience: 2
+        },
+        {
+          name: "AWS S3",
+          proficiency: 75,
+          icon: "fab fa-aws",
+          yearsOfExperience: 2
+        },
+        {
+          name: "AWS RDS",
+          proficiency: 70,
+          icon: "fab fa-aws",
+          yearsOfExperience: 2
+        },
+        {
+          name: "AWS Lambda",
+          proficiency: 70,
+          icon: "fab fa-aws",
+          yearsOfExperience: 2
         }
       ]
     },
