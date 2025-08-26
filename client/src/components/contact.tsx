@@ -93,8 +93,8 @@ export default function Contact() {
     {
       icon: <Github className="w-6 h-6" />,
       label: "GitHub",
-      value: "github.com/rajkumarmandal17",
-      href: "https://github.com/rajkumarmandal17",
+      value: "github.com/rajmandal17",
+      href: "https://github.com/rajmandal17",
       testId: "contact-github"
     },
   ];
@@ -149,7 +149,7 @@ export default function Contact() {
                       data-testid="social-github"
                     >
                       <a
-                        href="https://github.com/rajkumarmandal17"
+                        href="https://github.com/rajmandal17"
                         target="_blank"
                         rel="noopener noreferrer"
                       >

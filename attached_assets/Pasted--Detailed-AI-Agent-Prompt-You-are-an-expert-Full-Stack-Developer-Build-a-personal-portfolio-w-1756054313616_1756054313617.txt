@@ -21,7 +21,7 @@ Contains links: Home | Resume | Skills | GitHub | Contributions | Contact.
 GitHub Repositories Dropdown:
 
 Fetch repos dynamically from GitHub REST API:
-https://api.github.com/users/rajkumarmandal17/repos
+https://api.github.com/users/rajmandal17/repos
 
 Show repo names in dropdown.
 
@@ -86,7 +86,7 @@ Display:
 
 🔗 LinkedIn → linkedin.com/in/rajkumarmandal17
 
-💻 GitHub → github.com/rajkumarmandal17
+💻 GitHub → github.com/rajmandal17
 
 📱 Phone → +91 8793148668
 
