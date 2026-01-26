@@ -1,6 +1,7 @@
 import Navbar from "@/components/navbar";
 import Hero from "@/components/hero";
 import FeaturedExchange from "@/components/featured-exchange";
+import FeaturedMarketplace from "@/components/featured-marketplace";
 import Resume from "@/components/resume";
 import Skills from "@/components/skills";
 import GitHub from "@/components/github";
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <FeaturedExchange />
+      <FeaturedMarketplace />
       <Resume />
       <Skills />
       <GitHub />
