@@ -119,6 +119,11 @@ export default function FeaturedMarketplace() {
                                     <ExternalLink className="ml-2 w-5 h-5" />
                                 </a>
                             </Button>
+                            <Button variant="outline" size="lg" asChild className="border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 px-8 py-7 rounded-2xl text-lg font-semibold transition-all">
+                                <a href="https://github.com/RajMandal17/makemycraftsEcom" target="_blank" rel="noopener noreferrer">
+                                    View Source Code
+                                </a>
+                            </Button>
                         </div>
                     </div>
                 </div>

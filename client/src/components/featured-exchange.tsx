@@ -13,7 +13,7 @@ export default function FeaturedExchange() {
     useEffect(() => {
         const timer = setTimeout(() => {
             toast({
-                title: "🚀 New Project: GitBitEx",
+                title: "🚀 New Project: TRADEX",
                 description: "Check out my new high-performance trading platform!",
                 action: (
                     <Button size="sm" onClick={() => setIsOpen(true)}>
@@ -36,11 +36,11 @@ export default function FeaturedExchange() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center mb-16">
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4 animate-pulse">
-                        <Zap className="w-4 h-4 mr-2" />
+                        < Zap className="w-4 h-4 mr-2" />
                         New Project Launch
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-slate-400 bg-clip-text text-transparent">
-                        GitBitEx Trading Platform
+                        TRADEX Trading Platform
                     </h2>
                     <p className="text-lg text-slate-400 max-w-3xl mx-auto">
                         A high-performance cryptocurrency exchange featuring real-time order matching,
@@ -103,7 +103,7 @@ export default function FeaturedExchange() {
                                                 <div className="w-3 h-3 rounded-full bg-red-500"></div>
                                                 <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                                                 <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                                                <span className="ml-4 text-sm font-medium text-slate-400">GitBitEx Terminal v1.0</span>
+                                                <span className="ml-4 text-sm font-medium text-slate-400">TRADEX Terminal v1.0</span>
                                             </div>
                                             <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="text-slate-400 hover:text-white">
                                                 <X className="w-5 h-5" />
@@ -133,18 +133,13 @@ export default function FeaturedExchange() {
                                                 <iframe
                                                     src={tradingUrl}
                                                     className="w-full h-full border-0"
-                                                    title="GitBitEx Trading Terminal"
+                                                    title="TRADEX Trading Terminal"
                                                 />
                                             )}
                                         </div>
                                     </div>
                                 </DialogContent>
                             </Dialog>
-                            <Button variant="outline" size="lg" asChild className="border-slate-700 text-slate-300 hover:bg-slate-800 px-8 py-7 rounded-2xl text-lg font-semibold">
-                                <a href="https://github.com/gitbitex/gitbitex-new" target="_blank" rel="noopener noreferrer">
-                                    View Source Code
-                                </a>
-                            </Button>
                         </div>
                     </div>
 
@@ -162,7 +157,7 @@ export default function FeaturedExchange() {
                                                 <TrendingUp className="w-8 h-8 text-blue-400" />
                                             </div>
                                             <h4 className="text-xl font-bold mb-2">Live Trading Demo</h4>
-                                            <p className="text-slate-400 text-sm">Experience the full power of GitBitEx with our interactive sandbox environment.</p>
+                                            <p className="text-slate-400 text-sm">Experience the full power of TRADEX with our interactive sandbox environment.</p>
                                         </div>
                                     </div>
                                 </div>
