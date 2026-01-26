@@ -1,192 +1,71 @@
 export const skillsData = {
   categories: [
     {
-      name: "Programming",
+      name: "Languages",
       skills: [
-        {
-          name: "Java",
-          proficiency: 95,
-          icon: "fab fa-java",
-          yearsOfExperience: 5
-        },
-        {
-          name: "Java 8+",
-          proficiency: 90,
-          icon: "fab fa-java",
-          yearsOfExperience: 4
-        },
-        {
-          name: "Python",
-          proficiency: 80,
-          icon: "fab fa-python",
-          yearsOfExperience: 3
-        },
-        {
-          name: "JavaScript",
-          proficiency: 75,
-          icon: "fab fa-js-square",
-          yearsOfExperience: 3
-        }
+        { name: "Java (8, 11, 17, 21)", proficiency: 95, icon: "fab fa-java", yearsOfExperience: 5 },
+        { name: "TypeScript", proficiency: 85, icon: "fab fa-js", yearsOfExperience: 3 },
+        { name: "JavaScript", proficiency: 80, icon: "fab fa-js-square", yearsOfExperience: 3 },
+        { name: "SQL", proficiency: 90, icon: "fas fa-database", yearsOfExperience: 4 }
       ]
     },
     {
-      name: "Frameworks",
+      name: "Backend",
       skills: [
-        {
-          name: "Spring Boot",
-          proficiency: 95,
-          icon: "fas fa-leaf",
-          yearsOfExperience: 5
-        },
-        {
-          name: "Spring MVC",
-          proficiency: 90,
-          icon: "fas fa-leaf",
-          yearsOfExperience: 4
-        },
-        {
-          name: "Spring Security",
-          proficiency: 88,
-          icon: "fas fa-shield-alt",
-          yearsOfExperience: 4
-        },
-        {
-          name: "Spring Data JPA",
-          proficiency: 90,
-          icon: "fas fa-database",
-          yearsOfExperience: 4
-        },
-        {
-          name: "Hibernate",
-          proficiency: 85,
-          icon: "fas fa-database",
-          yearsOfExperience: 4
-        },
-        {
-          name: "Swagger/OpenAPI",
-          proficiency: 85,
-          icon: "fas fa-file-code",
-          yearsOfExperience: 3
-        }
+        { name: "Spring Boot", proficiency: 95, icon: "fas fa-leaf", yearsOfExperience: 5 },
+        { name: "Spring MVC", proficiency: 90, icon: "fas fa-leaf", yearsOfExperience: 4 },
+        { name: "Spring Data JPA", proficiency: 92, icon: "fas fa-database", yearsOfExperience: 4 },
+        { name: "Hibernate", proficiency: 88, icon: "fas fa-database", yearsOfExperience: 4 },
+        { name: "Spring Security", proficiency: 85, icon: "fas fa-shield-alt", yearsOfExperience: 4 },
+        { name: "REST APIs", proficiency: 95, icon: "fas fa-network-wired", yearsOfExperience: 5 }
       ]
     },
     {
       name: "Databases",
       skills: [
-        {
-          name: "MySQL",
-          proficiency: 90,
-          icon: "fas fa-database",
-          yearsOfExperience: 5
-        },
-        {
-          name: "MongoDB",
-          proficiency: 85,
-          icon: "fas fa-leaf",
-          yearsOfExperience: 3
-        },
-        {
-          name: "Redis",
-          proficiency: 80,
-          icon: "fas fa-fire",
-          yearsOfExperience: 3
-        }
+        { name: "MySQL", proficiency: 90, icon: "fas fa-database", yearsOfExperience: 5 },
+        { name: "MongoDB", proficiency: 85, icon: "fas fa-leaf", yearsOfExperience: 3 },
+        { name: "Redis", proficiency: 88, icon: "fas fa-fire", yearsOfExperience: 3 },
+        { name: "H2", proficiency: 80, icon: "fas fa-database", yearsOfExperience: 3 },
+        { name: "Elasticsearch", proficiency: 75, icon: "fas fa-search", yearsOfExperience: 2 }
       ]
     },
     {
-      name: "DevOps",
+      name: "Testing",
       skills: [
-        {
-          name: "Docker",
-          proficiency: 85,
-          icon: "fab fa-docker",
-          yearsOfExperience: 3
-        },
-        
-        {
-          name: "Docker Compose",
-          proficiency: 80,
-          icon: "fab fa-docker",
-          yearsOfExperience: 3
-        },
-        {
-          name: "Git",
-          proficiency: 95,
-          icon: "fab fa-git-alt",
-          yearsOfExperience: 5
-        },
-        {
-          name: "Maven",
-          proficiency: 90,
-          icon: "fas fa-cube",
-          yearsOfExperience: 4
-        },
-        {
-          name: "Linux",
-          proficiency: 80,
-          icon: "fab fa-linux",
-          yearsOfExperience: 4
-        }
-        ,
-        {
-          name: "AWS EC2",
-          proficiency: 75,
-          icon: "fab fa-aws",
-          yearsOfExperience: 2
-        },
-        {
-          name: "AWS S3",
-          proficiency: 75,
-          icon: "fab fa-aws",
-          yearsOfExperience: 2
-        },
-        {
-          name: "AWS RDS",
-          proficiency: 70,
-          icon: "fab fa-aws",
-          yearsOfExperience: 2
-        },
-        {
-          name: "AWS Lambda",
-          proficiency: 70,
-          icon: "fab fa-aws",
-          yearsOfExperience: 2
-        }
+        { name: "JUnit 5", proficiency: 90, icon: "fas fa-vial", yearsOfExperience: 4 },
+        { name: "Mockito", proficiency: 88, icon: "fas fa-vial", yearsOfExperience: 4 },
+        { name: "Spring Boot Test", proficiency: 85, icon: "fas fa-flask", yearsOfExperience: 3 },
+        { name: "TDD", proficiency: 80, icon: "fas fa-check-double", yearsOfExperience: 3 }
       ]
     },
     {
-      name: "Tools",
+      name: "Real-Time & Concurrency",
       skills: [
-        {
-          name: "Apache Kafka",
-          proficiency: 90,
-          icon: "fas fa-stream",
-          yearsOfExperience: 3
-        },
-        {
-          name: "Postman",
-          proficiency: 85,
-          icon: "fas fa-paper-plane",
-          yearsOfExperience: 4
-        },
-        {
-          name: "JIRA",
-          proficiency: 80,
-          icon: "fas fa-tasks",
-          yearsOfExperience: 4
-        },
-        {
-          name: "Micrometer",
-          proficiency: 75,
-          icon: "fas fa-chart-line",
-          yearsOfExperience: 2
-        },
-        {
-          name: "Zipkin",
-          proficiency: 70,
-          icon: "fas fa-search",
-          yearsOfExperience: 2
-        }
+        { name: "WebSockets", proficiency: 90, icon: "fas fa-sync", yearsOfExperience: 3 },
+        { name: "STOMP & SockJS", proficiency: 85, icon: "fas fa-plug", yearsOfExperience: 3 },
+        { name: "Redis Pub/Sub", proficiency: 85, icon: "fas fa-broadcast-tower", yearsOfExperience: 3 },
+        { name: "Multithreading", proficiency: 88, icon: "fas fa-tasks", yearsOfExperience: 4 },
+        { name: "Virtual Threads", proficiency: 80, icon: "fas fa-stream", yearsOfExperience: 1 }
+      ]
+    },
+    {
+      name: "Architecture",
+      skills: [
+        { name: "Microservices", proficiency: 90, icon: "fas fa-cubes", yearsOfExperience: 3 },
+        { name: "LLD & SOLID", proficiency: 85, icon: "fas fa-drafting-compass", yearsOfExperience: 3 },
+        { name: "Design Patterns", proficiency: 85, icon: "fas fa-project-diagram", yearsOfExperience: 3 },
+        { name: "Event-Driven Systems", proficiency: 82, icon: "fas fa-bolt", yearsOfExperience: 2 }
+      ]
+    },
+    {
+      name: "DevOps & Tools",
+      skills: [
+        { name: "Maven", proficiency: 90, icon: "fas fa-cube", yearsOfExperience: 4 },
+        { name: "Git", proficiency: 95, icon: "fab fa-git-alt", yearsOfExperience: 5 },
+        { name: "Jenkins", proficiency: 75, icon: "fab fa-jenkins", yearsOfExperience: 2 },
+        { name: "Docker", proficiency: 82, icon: "fab fa-docker", yearsOfExperience: 3 },
+        { name: "Swagger/Postman", proficiency: 95, icon: "fas fa-paper-plane", yearsOfExperience: 4 }
       ]
     }
   ]

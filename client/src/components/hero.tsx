@@ -15,8 +15,8 @@ export default function Hero() {
   };
 
   return (
-    <section 
-      id="home" 
+    <section
+      id="home"
       className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 relative overflow-hidden"
     >
       {/* Background Animation */}
@@ -24,7 +24,7 @@ export default function Hero() {
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-brand-500 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl animate-pulse" style={{ animationDelay: '1000ms' }}></div>
       </div>
-      
+
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="animate-fade-in">
           {/* Professional Photo */}
@@ -41,17 +41,17 @@ export default function Hero() {
               }}
             />
           </div>
-          
+
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-slate-100 mb-6">
             Rajkumar Mandal
           </h1>
-          
+
           {/* Animated Typing Effect */}
           <div className="text-xl sm:text-2xl lg:text-3xl text-slate-600 dark:text-slate-400 mb-8 h-16 flex items-center justify-center">
-            <TypingAnimation 
+            <TypingAnimation
               texts={[
                 'Java Backend Developer',
-                'Microservices Architect', 
+                'Microservices Architect',
                 'Spring Boot Expert',
                 'Apache Kafka Specialist'
               ]}
@@ -59,12 +59,12 @@ export default function Hero() {
               data-testid="typing-animation"
             />
           </div>
-          
+
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-12">
-            Passionate backend developer with expertise in building scalable microservices architectures. 
-            Experienced in Spring Boot, Apache Kafka, and cloud-native technologies with a focus on high-performance systems.
+            Java Backend Developer with 2+ years of experience designing and building scalable backend systems.
+            Expertise in Spring Boot, Microservices, and real-time communication with a focus on high-performance transactional systems.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               onClick={() => scrollToSection('contact')}

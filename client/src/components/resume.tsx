@@ -11,7 +11,7 @@ export default function Resume() {
           <h2 className="text-4xl font-bold text-foreground mb-4">Resume</h2>
           <p className="text-lg text-muted-foreground">My professional journey and experience</p>
         </div>
-        
+
         {/* Professional Summary */}
         <div className="mb-16 animate-slide-up">
           <Card className="border-border shadow-lg">
@@ -23,14 +23,14 @@ export default function Resume() {
             </CardContent>
           </Card>
         </div>
-        
+
         {/* Work Experience Timeline */}
         <div className="mb-16 animate-slide-up">
           <h3 className="text-2xl font-bold text-foreground mb-8">Work Experience</h3>
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-brand-500"></div>
-            
+
             {resumeData.experience.map((job, index) => (
               <div key={index} className="relative pl-12 pb-12" data-testid={`job-${index}`}>
                 <div className="absolute left-0 top-2 w-8 h-8 bg-brand-500 rounded-full border-4 border-background shadow-lg"></div>
@@ -70,9 +70,9 @@ export default function Resume() {
             ))}
           </div>
         </div>
-        
+
         {/* Education */}
-        <div className="animate-slide-up">
+        <div className="mb-16 animate-slide-up">
           <h3 className="text-2xl font-bold text-foreground mb-8">Education</h3>
           <div className="grid md:grid-cols-2 gap-6">
             {resumeData.education.map((edu, index) => (
@@ -83,13 +83,28 @@ export default function Resume() {
                   <p className="text-muted-foreground mb-2">{edu.institution}</p>
                   <div className="flex items-center justify-between text-sm text-muted-foreground">
                     <span>{edu.period}</span>
-                    {edu.gpa && <span>GPA: {edu.gpa}</span>}
+                    {edu.gpa && <span>{edu.gpa}</span>}
                   </div>
                 </CardContent>
               </Card>
             ))}
           </div>
         </div>
+
+        {/* Certifications */}
+        {resumeData.certifications && (
+          <div className="animate-slide-up">
+            <h3 className="text-2xl font-bold text-foreground mb-8">Certifications & Achievements</h3>
+            <div className="grid md:grid-cols-2 gap-4">
+              {resumeData.certifications.map((cert, index) => (
+                <div key={index} className="flex items-center p-4 bg-muted/30 rounded-lg border border-border">
+                  <ChevronRight className="h-4 w-4 text-brand-500 mr-2 flex-shrink-0" />
+                  <span className="text-foreground font-medium">{cert}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

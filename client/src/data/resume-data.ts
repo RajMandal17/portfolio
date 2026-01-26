@@ -1,20 +1,25 @@
 export const resumeData = {
-  summary: "Innovative and detail-oriented Java Backend Developer with experience in designing, developing, and deploying high-performance microservices and enterprise applications using Java 8+, Spring Boot, and Kafka. Proficient in building scalable REST APIs with Swagger/OpenAPI standards, optimizing relational and NoSQL databases, and implementing event-driven architectures. Experienced in domains including finance, healthcare, and supply chain management.",
-  
+  summary: "Java Backend Developer with 2+ years of experience designing and building scalable backend systems using Java, Spring Boot, and Microservices. Strong expertise in REST API development, transactional systems, concurrency, and asynchronous processing. Hands-on experience with Low-Level Design (LLD), design patterns, and component-based architectures. Proven ability to debug production issues, optimize performance, and deliver reliable systems in Agile environments. Experienced with relational and NoSQL databases, CI/CD pipelines, Redis, Elasticsearch, and real-time communication using WebSockets.",
+
   experience: [
     {
-      title: "Senior Programmer",
-      company: "Osiz Technologies Pvt Ltd (KOINPARK), Madurai, TN",
+      title: "Java Backend Developer",
+      company: "Osiz Technologies Pvt Ltd, Madurai",
       period: "Jun 2024 - Present",
       responsibilities: [
-        "Designed and implemented microservices using Spring Boot and Kafka for high-frequency cryptocurrency trading with 5K+ events/sec throughput",
-        "Built REST APIs with Swagger/OpenAPI documentation, enabling seamless third-party integrations and supporting 1M+ user transactions",
-        "Leveraged Domain-Driven Design and bounded contexts to refactor legacy modules for maintainability and scalability",
-        "Integrated MongoDB with Spring Data JPA for dynamic order book persistence and optimized Redis caching for low-latency access",
-        "Participated in Agile ceremonies including sprint planning, retrospectives, and daily stand-ups to ensure timely delivery",
-        "Implemented SQL queries with complex joins, indexing strategies, and stored procedures for trade analytics and reporting"
+        "Designed and developed scalable backend services using Java, Spring Boot, Spring MVC, and Spring Data JPA",
+        "Built secure and reusable REST APIs handling authentication, authorization, validation, and business rules",
+        "Implemented ACID-compliant transactional workflows for wallet, ledger, and fund-transfer systems using @Transactional",
+        "Developed asynchronous processing pipelines using multithreading, atomic variables, and concurrent collections",
+        "Implemented real-time communication using WebSockets, STOMP, and Redis Pub/Sub",
+        "Improved system performance using Redis caching and optimized SQL queries",
+        "Integrated Swagger/OpenAPI for API documentation and Postman for API validation",
+        "Achieved 80%+ test coverage by implementing unit and integration tests using JUnit 5 and Mockito",
+        "Applied design patterns (Factory, Strategy, Observer, Singleton) to improve code maintainability and extensibility",
+        "Debugged and resolved production issues through log analysis, SQL inspection, and JVM-level performance tuning",
+        "Collaborated with QA and frontend teams in an Agile/Scrum development environment"
       ],
-      technologies: ["Java 8+", "Spring Boot", "Apache Kafka", "MongoDB", "Spring Data JPA", "Redis", "Swagger/OpenAPI", "Domain-Driven Design"]
+      technologies: ["Java", "Spring Boot", "Spring MVC", "Spring Data JPA", "WebSockets", "Redis", "JUnit 5", "Mockito", "Design Patterns"]
     },
     {
       title: "Java Developer",
@@ -28,38 +33,31 @@ export const resumeData = {
         "Enforced role-based access control and audit trails for sensitive operations, ensuring compliance and traceability",
         "Automated deployment with Docker Compose and maintained MySQL databases with advanced queries, indexing, and stored procedures"
       ],
-      technologies: ["Spring Boot", "React", "MySQL", "Docker Compose", "Spring Security", "PDF Export", "Role-based Access Control"]
-    },
-    {
-      title: "Service Consultant",
-      company: "Royal Enfield (HRIDAAN MOTORS LLP), Pune, Maharashtra",
-      period: "Jul 2019 - May 2021",
-      responsibilities: [
-        "Leveraged digital systems (DMS) to manage service workflows, analyze diagnostic data, and generate reports",
-        "Collaborated with technicians, inventory managers, and customer service teams to streamline operations and resolve issues efficiently",
-        "Identified recurring issues via structured documentation and root cause analysis, leading to preventive solutions",
-        "Maintained service records and customer logs, practicing disciplined documentation aligned with Agile and ticketing workflows",
-        "Supported data-driven decisions by evaluating service patterns, warranty claims, and performance trends",
-        "Attended training sessions on internal tools and systems, demonstrating adaptability and a growth mindset"
-      ],
-      technologies: ["DMS", "Digital Systems", "Data Analysis", "Documentation", "Process Optimization", "Customer Service Systems"]
+      technologies: ["Spring Boot", "React", "MySQL", "Docker Compose", "Spring Security", "PDF Export"]
     }
   ],
-  
+
   education: [
     {
-      degree: "B.E in Automobile Engineering",
+      degree: "B.E. in Automobile Engineering",
       field: "Automobile Engineering",
-      institution: "D. Y. Patil School of Engineering Academy, Pune, Maharashtra",
+      institution: "D. Y. Patil School of Engineering Academy, Pune",
       period: "2018 - 2022",
       gpa: "8.16/10"
     },
     {
-      degree: "Diploma",
+      degree: "Diploma in Automobile Engineering",
       field: "Automobile Engineering",
-      institution: "G. H. Raisoni Polytechnic College, Nagpur, Maharashtra",
+      institution: "G. H. Raisoni Polytechnic College, Nagpur",
       period: "2014 - 2017",
       gpa: null
     }
+  ],
+
+  certifications: [
+    "Java SE 8 Features – Infosys Springboard",
+    "Java Language Features – Infosys Springboard",
+    "Spring & Hibernate for Beginners",
+    "Patent Holder: Social Distancing Device"
   ]
 };
