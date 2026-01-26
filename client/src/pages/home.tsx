@@ -1,5 +1,6 @@
 import Navbar from "@/components/navbar";
 import Hero from "@/components/hero";
+import FeaturedExchange from "@/components/featured-exchange";
 import Resume from "@/components/resume";
 import Skills from "@/components/skills";
 import GitHub from "@/components/github";
@@ -12,6 +13,7 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <Navbar />
       <Hero />
+      <FeaturedExchange />
       <Resume />
       <Skills />
       <GitHub />
