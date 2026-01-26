@@ -8,7 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 export default function FeaturedExchange() {
     const [isOpen, setIsOpen] = useState(false);
     const { toast } = useToast();
-    const tradingUrl = "http://143.110.250.170:3000/trading/BTC-USDT";
+    const tradingUrl = "https://tradex-exchange.143.110.250.170.sslip.io/trading/BTC-USDT";
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -109,33 +109,12 @@ export default function FeaturedExchange() {
                                                 <X className="w-5 h-5" />
                                             </Button>
                                         </div>
-                                        <div className="flex-1 bg-black relative flex items-center justify-center p-8">
-                                            {window.location.protocol === 'https:' ? (
-                                                <div className="text-center max-w-lg animate-in fade-in zoom-in duration-500">
-                                                    <div className="w-20 h-20 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-blue-500/20">
-                                                        <ExternalLink className="w-10 h-10 text-blue-400" />
-                                                    </div>
-                                                    <h3 className="text-2xl font-bold mb-4">Secure Connection Active</h3>
-                                                    <p className="text-slate-400 mb-8 leading-relaxed">
-                                                        To protect your security, browsers prevent loading insecure (HTTP) content directly
-                                                        inside this secure (HTTPS) site.
-                                                    </p>
-                                                    <Button
-                                                        size="lg"
-                                                        className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-6 rounded-xl text-lg font-bold shadow-lg shadow-blue-500/20"
-                                                        onClick={() => window.open(tradingUrl, '_blank')}
-                                                    >
-                                                        Launch Terminal in New Tab
-                                                        <ExternalLink className="ml-2 w-4 h-4" />
-                                                    </Button>
-                                                </div>
-                                            ) : (
-                                                <iframe
-                                                    src={tradingUrl}
-                                                    className="w-full h-full border-0"
-                                                    title="TRADEX Trading Terminal"
-                                                />
-                                            )}
+                                        <div className="flex-1 bg-black relative">
+                                            <iframe
+                                                src={tradingUrl}
+                                                className="w-full h-full border-0"
+                                                title="TRADEX Trading Terminal"
+                                            />
                                         </div>
                                     </div>
                                 </DialogContent>
