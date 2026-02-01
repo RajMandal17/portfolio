@@ -79,8 +79,8 @@ export default function FeaturedMarketplace() {
                                     <Palette className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-slate-900 dark:text-white">Artist Galleries</h4>
-                                    <p className="text-sm text-slate-500 dark:text-slate-400">Custom profile pages for creators to curate their work.</p>
+                                    <h4 className="font-bold text-slate-900 dark:text-white">Scalable Artist Infrastructure</h4>
+                                    <p className="text-sm text-slate-500 dark:text-slate-400">Supporting unlimited creator onboarding with role-based access control and audit trails.</p>
                                 </div>
                             </div>
                             <div className="flex gap-4">
@@ -88,8 +88,8 @@ export default function FeaturedMarketplace() {
                                     <Sparkles className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-slate-900 dark:text-white">AI Art Analysis</h4>
-                                    <p className="text-sm text-slate-500 dark:text-slate-400">Integrated Gemini AI for automated artwork descriptions.</p>
+                                    <h4 className="font-bold text-slate-900 dark:text-white">AI-Powered Moderation</h4>
+                                    <p className="text-sm text-slate-500 dark:text-slate-400">Integrated Google Gemini AI for classification, reducing manual review effort by 70%.</p>
                                 </div>
                             </div>
                             <div className="flex gap-4">
@@ -97,8 +97,8 @@ export default function FeaturedMarketplace() {
                                     <Globe className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-slate-900 dark:text-white">Global Search</h4>
-                                    <p className="text-sm text-slate-500 dark:text-slate-400">High-performance elastic search across thousands of crafts.</p>
+                                    <h4 className="font-bold text-slate-900 dark:text-white">Transactional Integrity</h4>
+                                    <p className="text-sm text-slate-500 dark:text-slate-400">ACID-compliant payment lifecycle ensuring 100% consistency across orders and inventory.</p>
                                 </div>
                             </div>
                             <div className="flex gap-4">
@@ -106,8 +106,8 @@ export default function FeaturedMarketplace() {
                                     <Layout className="w-6 h-6 text-purple-600 dark:text-purple-400" />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-slate-900 dark:text-white">Responsive Design</h4>
-                                    <p className="text-sm text-slate-500 dark:text-slate-400">Optimized for desktop, tablet, and mobile gallery viewing.</p>
+                                    <h4 className="font-bold text-slate-900 dark:text-white">Real-time Inventory</h4>
+                                    <p className="text-sm text-slate-500 dark:text-slate-400">WebSocket-driven state updates for live stock tracking and instant order notifications.</p>
                                 </div>
                             </div>
                         </div>

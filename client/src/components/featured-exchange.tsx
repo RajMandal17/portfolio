@@ -10,20 +10,21 @@ export default function FeaturedExchange() {
     const { toast } = useToast();
     const tradingUrl = "https://tradex-exchange.143.110.250.170.sslip.io/trading/BTC-USDT";
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            toast({
-                title: "🚀 New Project: TRADEX",
-                description: "Check out my new high-performance trading platform!",
-                action: (
-                    <Button size="sm" onClick={() => setIsOpen(true)}>
-                        View Live
-                    </Button>
-                ),
-            });
-        }, 2000);
-        return () => clearTimeout(timer);
-    }, [toast]);
+    // Removed automatic toast on load as per Naveen's feedback to avoid driving concentration away from portfolio
+    // useEffect(() => {
+    //     const timer = setTimeout(() => {
+    //         toast({
+    //             title: "🚀 New Project: TRADEX",
+    //             description: "Check out my new high-performance trading platform!",
+    //             action: (
+    //                 <Button size="sm" onClick={() => setIsOpen(true)}>
+    //                     View Live
+    //                 </Button>
+    //             ),
+    //         });
+    //     }, 2000);
+    //     return () => clearTimeout(timer);
+    // }, [toast]);
 
     return (
         <section id="exchange" className="py-24 bg-slate-900 text-white relative overflow-hidden">

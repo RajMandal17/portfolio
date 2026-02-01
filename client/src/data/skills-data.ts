@@ -40,8 +40,20 @@ export const skillsData = {
       ]
     },
     {
+      name: "Trading & Exchange Systems",
+      skills: [
+        { name: "Matching Engine", proficiency: 90, icon: "fas fa-cogs", yearsOfExperience: 2 },
+        { name: "Low-Latency OMS", proficiency: 88, icon: "fas fa-clock", yearsOfExperience: 2 },
+        { name: "FIX Connectivity", proficiency: 85, icon: "fas fa-exchange-alt", yearsOfExperience: 2 },
+        { name: "Market Data Handlers", proficiency: 87, icon: "fas fa-chart-line", yearsOfExperience: 2 },
+        { name: "SMART Order Routing (SOR)", proficiency: 85, icon: "fas fa-route", yearsOfExperience: 2 },
+        { name: "Distributed Tracing", proficiency: 82, icon: "fas fa-search-plus", yearsOfExperience: 2 }
+      ]
+    },
+    {
       name: "Real-Time & Concurrency",
       skills: [
+        { name: "Apache Kafka", proficiency: 88, icon: "fas fa-project-diagram", yearsOfExperience: 2 },
         { name: "WebSockets", proficiency: 90, icon: "fas fa-sync", yearsOfExperience: 3 },
         { name: "STOMP & SockJS", proficiency: 85, icon: "fas fa-plug", yearsOfExperience: 3 },
         { name: "Redis Pub/Sub", proficiency: 85, icon: "fas fa-broadcast-tower", yearsOfExperience: 3 },
@@ -55,7 +67,7 @@ export const skillsData = {
         { name: "Microservices", proficiency: 90, icon: "fas fa-cubes", yearsOfExperience: 3 },
         { name: "LLD & SOLID", proficiency: 85, icon: "fas fa-drafting-compass", yearsOfExperience: 3 },
         { name: "Design Patterns", proficiency: 85, icon: "fas fa-project-diagram", yearsOfExperience: 3 },
-        { name: "Event-Driven Systems", proficiency: 82, icon: "fas fa-bolt", yearsOfExperience: 2 }
+        { name: "Event-Driven Architecture", proficiency: 82, icon: "fas fa-bolt", yearsOfExperience: 2 }
       ]
     },
     {

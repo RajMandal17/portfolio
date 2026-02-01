@@ -50,10 +50,10 @@ export default function Hero() {
           <div className="text-xl sm:text-2xl lg:text-3xl text-slate-600 dark:text-slate-400 mb-8 h-16 flex items-center justify-center">
             <TypingAnimation
               texts={[
-                'Java Backend Developer',
-                'Microservices Architect',
-                'Spring Boot Expert',
-                'Apache Kafka Specialist'
+                'Exchange Engineer',
+                'Low-Latency Java Architect',
+                'Matching Engine Developer',
+                'Distributed Systems Expert'
               ]}
               className="border-r-2 border-brand-500"
               data-testid="typing-animation"
@@ -61,8 +61,8 @@ export default function Hero() {
           </div>
 
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-12">
-            Java Backend Developer with 2+ years of experience designing and building scalable backend systems.
-            Expertise in Spring Boot, Microservices, and real-time communication with a focus on high-performance transactional systems.
+            Backend Engineer specializing in High-Performance Trading Systems and Low-Latency Architectures.
+            Expert in building scalable matching engines, wallet ledgers, and real-time event-driven platforms with Java, Spring Boot, and Kafka.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
