@@ -47,17 +47,26 @@ export const skillsData = {
         { name: "FIX Connectivity", proficiency: 85, icon: "fas fa-exchange-alt", yearsOfExperience: 2 },
         { name: "Market Data Handlers", proficiency: 87, icon: "fas fa-chart-line", yearsOfExperience: 2 },
         { name: "SMART Order Routing (SOR)", proficiency: 85, icon: "fas fa-route", yearsOfExperience: 2 },
-        { name: "Distributed Tracing", proficiency: 82, icon: "fas fa-search-plus", yearsOfExperience: 2 }
+        { name: "Order Workflows", proficiency: 92, icon: "fas fa-tasks", yearsOfExperience: 2 }
+      ]
+    },
+    {
+      name: "Performance & Observability",
+      skills: [
+        { name: "JVM & GC Tuning", proficiency: 85, icon: "fas fa-microchip", yearsOfExperience: 2 },
+        { name: "Distributed Tracing", proficiency: 82, icon: "fas fa-search-plus", yearsOfExperience: 2 },
+        { name: "Chaos Engineering", proficiency: 70, icon: "fas fa-skull-crossbones", yearsOfExperience: 1 },
+        { name: "Prometheus & Grafana", proficiency: 78, icon: "fas fa-chart-bar", yearsOfExperience: 2 },
+        { name: "Structured Logging", proficiency: 90, icon: "fas fa-file-alt", yearsOfExperience: 3 }
       ]
     },
     {
       name: "Real-Time & Concurrency",
       skills: [
         { name: "Apache Kafka", proficiency: 88, icon: "fas fa-project-diagram", yearsOfExperience: 2 },
-        { name: "WebSockets", proficiency: 90, icon: "fas fa-sync", yearsOfExperience: 3 },
-        { name: "STOMP & SockJS", proficiency: 85, icon: "fas fa-plug", yearsOfExperience: 3 },
+        { name: "WebSockets (STOMP)", proficiency: 90, icon: "fas fa-sync", yearsOfExperience: 3 },
+        { name: "Lock-Free Primitives", proficiency: 82, icon: "fas fa-unlocked", yearsOfExperience: 2 },
         { name: "Redis Pub/Sub", proficiency: 85, icon: "fas fa-broadcast-tower", yearsOfExperience: 3 },
-        { name: "Multithreading", proficiency: 88, icon: "fas fa-tasks", yearsOfExperience: 4 },
         { name: "Virtual Threads", proficiency: 80, icon: "fas fa-stream", yearsOfExperience: 1 }
       ]
     },
