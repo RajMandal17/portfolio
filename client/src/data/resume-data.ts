@@ -24,7 +24,7 @@ export const resumeData = {
     {
       title: "Java Developer",
       company: "Selica Technology, Bengaluru, Karnataka",
-      period: "May 2022 - Apr 2024",
+      period: "May 2022 - Jan 2024",
       responsibilities: [
         "Led end-to-end development of a comprehensive Hospital Management System (HMS) using Spring Boot microservices and React",
         "Implemented patient registration, appointment booking, digital prescription, and visit history features for OPD workflows",
